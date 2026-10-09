@@ -73,8 +73,12 @@ def _check_args(name, args):
     for key, rule in spec['parameters']['properties'].items():
         if type(args[key]) is not (int if rule['type'] == 'integer' else str):
             raise ValueError('tool_contract')
-    if name == 'refund' and not 0 < args['amount_pence'] <= 2**63 - 1:
-        raise ValueError('tool_contract')
+    if name == 'refund':
+        # Match the reused OpenAI adapter's static executor binding checks.
+        # Validate every binding before returning any action from the batch.
+        args['order_id'].encode('utf-8')
+        if not 0 < args['amount_pence'] <= 2**63 - 1:
+            raise ValueError('tool_contract')
     if name == 'ask' and not args['text'].strip():
         raise ValueError('tool_contract')
 

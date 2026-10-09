@@ -7,6 +7,64 @@ from unittest.mock import patch
 from live.test_live_run import live_run as L, plan, providers, run
 
 
+class RefundBatchAdmission(unittest.TestCase):
+    def execute_batch(self, order_ids):
+        from chapter02.task_lab import load_card, run_trial
+        blocks = [dict(type='tool_use', id=f'refund-{i}', name='refund',
+                       input=dict(order_id=order_id, amount_pence=1))
+                  for i, order_id in enumerate(order_ids)]
+        responses = iter([
+            dict(type='message', stop_reason='tool_use', content=blocks),
+            dict(type='message', stop_reason='end_turn', content=[dict(
+                type='text', text=json.dumps(dict(status='completed',
+                    reason='full_refund', text='Recorded.')))])])
+        # Exercise escaped JSON surrogates, not a replacement-character decoder.
+        def transport(payload, timeout):
+            return json.loads(json.dumps(next(responses)))
+        agent = providers.MessagesAgent(transport, 'offline-batch')
+        with patch.object(providers, '_post', side_effect=AssertionError('network')):
+            result = run_trial(load_card('full'), agent=agent)
+        return agent, result
+
+    def check_invalid_position(self, position):
+        for invalid in ('\ud800', '\udfff'):
+            with self.subTest(position=position, invalid=repr(invalid)):
+                ids = ['A100', 'A100', 'A100']
+                ids[position] = invalid
+                agent, result = self.execute_batch(ids)
+                self.assertEqual(result['after'], result['before'])
+                self.assertEqual(result['after']['refunds'], [])
+                self.assertEqual(result['trace'], [])
+                self.assertEqual(result['status'], 'AGENT_ERROR')
+                self.assertEqual(agent.error, dict(status='AGENT_ERROR',
+                    reason='malformed_provider_response'))
+                self.assertEqual(agent.queue, [])
+                self.assertEqual(agent.awaiting, [])
+                self.assertEqual(agent.requests, 1)
+
+    def test_invalid_utf8_first(self):
+        self.check_invalid_position(0)
+
+    def test_invalid_utf8_middle(self):
+        self.check_invalid_position(1)
+
+    def test_invalid_utf8_last(self):
+        self.check_invalid_position(2)
+
+    def test_valid_utf8_refund_batches_reach_executor(self):
+        # Static admission is not business grading: these partial refunds need
+        # not PASS, but valid ASCII/Unicode bindings must reach real SQLite.
+        for ids in (['A100', 'A100', 'A100'], ['A100', 'caf\u00e9', '\U0001f600']):
+            with self.subTest(ids=ids):
+                agent, result = self.execute_batch(ids)
+                self.assertIsNone(agent.error)
+                self.assertEqual(result['status'], 'FAIL')
+                self.assertCountEqual(result['after']['refunds'], [[oid, 1] for oid in ids])
+                self.assertEqual([e['kind'] for e in result['trace']],
+                                 ['refund', 'refund', 'refund', 'finish'])
+                self.assertEqual(agent.requests, 2)
+
+
 class Safety(unittest.TestCase):
     def test_plan_strict_finite_positive_and_types(self):
         for key in ('ceiling', 'seconds_per_trial', 'max_output_tokens', 'max_requests_per_trial', 'trials_per_task'):

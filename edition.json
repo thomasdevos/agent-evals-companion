@@ -5,20 +5,41 @@
   "source_zip_sha256": "a1670ba220a0d24c434bde4a10f610c9224dbf4709d550997cca069c0277fbb6",
   "status": "private development checkpoint; not a publication release",
   "license_status": "publication licensing decision pending",
-  "known_open_findings": "Real two-model observation study requires separate authorisation; broader whole-book editorial/source review, final rendered acceptance and author approval are separate from this offline code checkpoint.",
+  "known_open_findings": "Genuine two-model observation study and empirical results need separate authorisation; author, access/licensing and publication decisions remain separate. Offline tests do not supply live results.",
   "manuscript_content_binding": {
     "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
-    "sha256": "38d259799cc0e6259fb754f39b6751ee7661b600a7886e167f36b76fc6706ad5",
+    "sha256": "1bb3a4afe7f344343d2ae3f9e10d2ec5f5bed439bec38de176ff1405d43dafe4",
     "references": 2
   },
   "title": "AI Agent Evals",
   "live_kit_status": "Supplied kit integrated with offline safety corrections; no live models executed; byte-based reservation is conditional, not a provider billing guarantee.",
   "live_kit_source_zip_sha256": "ca138ef6ae49652bc69e8a40964d7c32e747ce3afaa0e4c4ef6876d899937d7b",
-  "offline_verification": {"python": "3.11.15", "commands": 34, "test_invocations": 834, "live_kit_tests": 26, "evidence": "AUTHORED_OFFLINE_FIXTURES", "hosted_ci": false},
-  "manuscript_binding_role": "Historical prior checkpoint binding; current manuscript integration is owned separately.",
+  "offline_verification": {
+    "python": "3.11.15",
+    "commands": 34,
+    "test_invocations": 834,
+    "live_kit_tests": 26,
+    "evidence": "AUTHORED_OFFLINE_FIXTURES",
+    "hosted_ci": false
+  },
+  "manuscript_binding_role": "Current corrected manuscript content; exactly two immutable commit pins normalised to avoid a circular hash.",
   "source_zip_role": "Base corrected archive before the two named Chapter 23 additions; the repository is an explicit reader-only subset, not byte-identical to that archive.",
   "additional_reader_sources": {
     "reader-package/chapter23-diagnosis/book/companion/chapter23/identity_review.py": "993b96797cfcc61438698922a8b27c753457ca92d3efc7e941ac8c928fa58a01",
     "reader-package/chapter23-diagnosis/book/companion/chapter23/test_identity_review.py": "232ffc8cd6b43a347694bf7089bc08a23b3a5729b0756163e7f5aed8f78c0054"
+  },
+  "previous_manuscript_content_binding": {
+    "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
+    "sha256": "38d259799cc0e6259fb754f39b6751ee7661b600a7886e167f36b76fc6706ad5",
+    "references": 2
+  },
+  "offline_verification_role": "Retained consolidated checkpoint evidence; not a fresh whole-book rerun after the narrow adapter correction.",
+  "offline_delta_verification": {
+    "scope": "Static UTF-8 refund binding admission before any response-batch effect",
+    "python": "3.11.15",
+    "normal_tests": 30,
+    "optimized_tests": 30,
+    "evidence": "AUTHORED_OFFLINE_FIXTURES",
+    "independent_acceptance": "recorded separately in book QA; not implied by producer tests"
   }
 }
