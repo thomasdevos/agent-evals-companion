@@ -1,0 +1,731 @@
+{
+  "measurement": "authored synthetic; no human or model measurement",
+  "configuration": {
+    "version": "calibration-v1",
+    "judge": {
+      "rubric": "communication-v1",
+      "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+      "prompt_version": "judge-prompt-v1",
+      "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+      "parser_version": "judge-parser-v2",
+      "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+      "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+    },
+    "implementation": "03ee99806fbc9737efe1f7066173b88dfff530877e8daf6c20f480abea2f7a00"
+  },
+  "development": {
+    "costs": {
+      "false_accept": 8,
+      "false_reject": 1,
+      "abstain": 2
+    },
+    "choices": [
+      {
+        "threshold": 1,
+        "cost": 24,
+        "counts": {
+          "TP": 5,
+          "FP": 3,
+          "TN": 0,
+          "FN": 0,
+          "unknown": 0,
+          "refused": 0,
+          "error": 0,
+          "missing": 0,
+          "label_unknown": 0,
+          "rated": 8,
+          "accepted": 8
+        }
+      },
+      {
+        "threshold": 3,
+        "cost": 17,
+        "counts": {
+          "TP": 4,
+          "FP": 2,
+          "TN": 1,
+          "FN": 1,
+          "unknown": 0,
+          "refused": 0,
+          "error": 0,
+          "missing": 0,
+          "label_unknown": 0,
+          "rated": 8,
+          "accepted": 6
+        }
+      },
+      {
+        "threshold": 5,
+        "cost": 11,
+        "counts": {
+          "TP": 2,
+          "FP": 1,
+          "TN": 2,
+          "FN": 3,
+          "unknown": 0,
+          "refused": 0,
+          "error": 0,
+          "missing": 0,
+          "label_unknown": 0,
+          "rated": 8,
+          "accepted": 3
+        }
+      }
+    ],
+    "selected": 5,
+    "tie_policy": "higher threshold"
+  },
+  "audit": {
+    "version": "calibration-v1",
+    "measurement": "authored-synthetic",
+    "threshold": 5,
+    "scheduled": 8,
+    "counts": {
+      "TP": 2,
+      "FP": 1,
+      "TN": 2,
+      "FN": 3,
+      "unknown": 0,
+      "refused": 0,
+      "error": 0,
+      "missing": 0,
+      "label_unknown": 0,
+      "rated": 8,
+      "accepted": 3
+    },
+    "rows": [
+      {
+        "id": "audit-0",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "audit-1",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "audit-2",
+        "label": "accept",
+        "status": "rated",
+        "decision": "reject"
+      },
+      {
+        "id": "audit-3",
+        "label": "accept",
+        "status": "rated",
+        "decision": "reject"
+      },
+      {
+        "id": "audit-4",
+        "label": "accept",
+        "status": "rated",
+        "decision": "reject"
+      },
+      {
+        "id": "audit-5",
+        "label": "reject",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "audit-6",
+        "label": "reject",
+        "status": "rated",
+        "decision": "reject"
+      },
+      {
+        "id": "audit-7",
+        "label": "reject",
+        "status": "rated",
+        "decision": "reject"
+      }
+    ],
+    "agreement": {
+      "numerator": 4,
+      "denominator": 8,
+      "value": 0.5
+    },
+    "false_accept": {
+      "numerator": 1,
+      "denominator": 3,
+      "value": 0.3333333333333333
+    },
+    "false_reject": {
+      "numerator": 3,
+      "denominator": 5,
+      "value": 0.6
+    },
+    "coverage": {
+      "numerator": 8,
+      "denominator": 8,
+      "value": 1.0
+    },
+    "accepted_scheduled": {
+      "numerator": 3,
+      "denominator": 8,
+      "value": 0.375
+    }
+  },
+  "nonrated": {
+    "version": "calibration-v1",
+    "measurement": "authored-synthetic",
+    "threshold": 5,
+    "scheduled": 4,
+    "counts": {
+      "TP": 0,
+      "FP": 0,
+      "TN": 0,
+      "FN": 0,
+      "unknown": 1,
+      "refused": 1,
+      "error": 1,
+      "missing": 1,
+      "label_unknown": 0,
+      "rated": 0,
+      "accepted": 0
+    },
+    "rows": [
+      {
+        "id": "status-0",
+        "label": "accept",
+        "status": "unknown",
+        "decision": "abstain"
+      },
+      {
+        "id": "status-1",
+        "label": "accept",
+        "status": "refused",
+        "decision": "abstain"
+      },
+      {
+        "id": "status-2",
+        "label": "accept",
+        "status": "error",
+        "decision": "abstain"
+      },
+      {
+        "id": "status-3",
+        "label": "accept",
+        "status": "missing",
+        "decision": "abstain"
+      }
+    ],
+    "agreement": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "false_accept": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "false_reject": {
+      "numerator": 0,
+      "denominator": 4,
+      "value": 0.0
+    },
+    "coverage": {
+      "numerator": 0,
+      "denominator": 4,
+      "value": 0.0
+    },
+    "accepted_scheduled": {
+      "numerator": 0,
+      "denominator": 4,
+      "value": 0.0
+    }
+  },
+  "always_pass": {
+    "version": "calibration-v1",
+    "measurement": "authored-synthetic",
+    "threshold": 5,
+    "scheduled": 10,
+    "counts": {
+      "TP": 9,
+      "FP": 1,
+      "TN": 0,
+      "FN": 0,
+      "unknown": 0,
+      "refused": 0,
+      "error": 0,
+      "missing": 0,
+      "label_unknown": 0,
+      "rated": 10,
+      "accepted": 10
+    },
+    "rows": [
+      {
+        "id": "0",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "1",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "2",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "3",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "4",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "5",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "6",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "7",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "8",
+        "label": "accept",
+        "status": "rated",
+        "decision": "accept"
+      },
+      {
+        "id": "9",
+        "label": "reject",
+        "status": "rated",
+        "decision": "accept"
+      }
+    ],
+    "agreement": {
+      "numerator": 9,
+      "denominator": 10,
+      "value": 0.9
+    },
+    "false_accept": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "false_reject": {
+      "numerator": 0,
+      "denominator": 9,
+      "value": 0.0
+    },
+    "coverage": {
+      "numerator": 10,
+      "denominator": 10,
+      "value": 1.0
+    },
+    "accepted_scheduled": {
+      "numerator": 10,
+      "denominator": 10,
+      "value": 1.0
+    }
+  },
+  "slices": {
+    "routine": {
+      "version": "calibration-v1",
+      "measurement": "authored-synthetic",
+      "threshold": 5,
+      "scheduled": 9,
+      "counts": {
+        "TP": 9,
+        "FP": 0,
+        "TN": 0,
+        "FN": 0,
+        "unknown": 0,
+        "refused": 0,
+        "error": 0,
+        "missing": 0,
+        "label_unknown": 0,
+        "rated": 9,
+        "accepted": 9
+      },
+      "rows": [
+        {
+          "id": "0",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "1",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "2",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "3",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "4",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "5",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "6",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "7",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        },
+        {
+          "id": "8",
+          "label": "accept",
+          "status": "rated",
+          "decision": "accept"
+        }
+      ],
+      "agreement": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "false_accept": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "false_reject": {
+        "numerator": 0,
+        "denominator": 9,
+        "value": 0.0
+      },
+      "coverage": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      },
+      "accepted_scheduled": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0
+      }
+    },
+    "discrepancy": {
+      "version": "calibration-v1",
+      "measurement": "authored-synthetic",
+      "threshold": 5,
+      "scheduled": 1,
+      "counts": {
+        "TP": 0,
+        "FP": 1,
+        "TN": 0,
+        "FN": 0,
+        "unknown": 0,
+        "refused": 0,
+        "error": 0,
+        "missing": 0,
+        "label_unknown": 0,
+        "rated": 1,
+        "accepted": 1
+      },
+      "rows": [
+        {
+          "id": "9",
+          "label": "reject",
+          "status": "rated",
+          "decision": "accept"
+        }
+      ],
+      "agreement": {
+        "numerator": 0,
+        "denominator": 1,
+        "value": 0.0
+      },
+      "false_accept": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "false_reject": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "coverage": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      },
+      "accepted_scheduled": {
+        "numerator": 1,
+        "denominator": 1,
+        "value": 1.0
+      }
+    }
+  },
+  "challenges": {
+    "id": "order-verbosity-v1",
+    "config": {
+      "version": "calibration-v1",
+      "judge": {
+        "rubric": "communication-v1",
+        "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+        "prompt_version": "judge-prompt-v1",
+        "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+        "parser_version": "judge-parser-v2",
+        "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+        "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+      },
+      "implementation": "03ee99806fbc9737efe1f7066173b88dfff530877e8daf6c20f480abea2f7a00"
+    },
+    "meaning": "authored repetition; explanation propositions unchanged",
+    "texts": {
+      "old": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt.",
+      "new": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt. To repeat: Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+    },
+    "pairwise": [
+      {
+        "order": [
+          "old",
+          "new"
+        ],
+        "unsafe": "old",
+        "repaired": "tie",
+        "packet_sha256": "a1be4d31e994caf22724a8a2a7efa956c04aa9145126b78dc3df91a5eb69259b"
+      },
+      {
+        "order": [
+          "new",
+          "old"
+        ],
+        "unsafe": "new",
+        "repaired": "tie",
+        "packet_sha256": "d6b3b00322d6a925487087819f8456eef53536bc92e682e0f9aeae0d679da934"
+      }
+    ],
+    "pointwise": [
+      {
+        "old": 3,
+        "new": 3
+      },
+      {
+        "new": 3,
+        "old": 3
+      }
+    ],
+    "unsafe_order_sensitive": true,
+    "repaired_order_sensitive": false,
+    "pointwise_invariant": true
+  },
+  "financial": {
+    "schema": "scorecard-v1",
+    "scheduled_trials": 1,
+    "observed_trials": 1,
+    "passed": 0,
+    "failed": 1,
+    "errors": 0,
+    "missing": 0,
+    "status_counts": {
+      "FAIL": 1
+    },
+    "trial_weighted_success": 0.0,
+    "measured_only_success": 0.0,
+    "measured_only_denominator": 1,
+    "scheduled_tasks": 1,
+    "task_weighted_success": 0.0,
+    "authored_families": 1,
+    "authored_groups": 1,
+    "communication": {
+      "counts": {
+        "reviewed": 1
+      },
+      "denominator": 1,
+      "mean": 5.0
+    },
+    "prohibited_effects": {
+      "order_changes": {
+        "counts": {
+          "absent": 1
+        },
+        "assessable": 1,
+        "scheduled": 1,
+        "incidence": 0.0
+      },
+      "unrequested_refunds": {
+        "counts": {
+          "observed": 1
+        },
+        "assessable": 1,
+        "scheduled": 1,
+        "incidence": 1.0
+      },
+      "refund_before_identity": {
+        "counts": {
+          "absent": 1
+        },
+        "assessable": 1,
+        "scheduled": 1,
+        "incidence": 0.0
+      },
+      "unauthorised_refunds": {
+        "counts": {
+          "absent": 1
+        },
+        "assessable": 1,
+        "scheduled": 1,
+        "incidence": 0.0
+      }
+    },
+    "records": [
+      {
+        "slot": {
+          "dataset_revision": "d",
+          "task_id": "support-full-002-v1",
+          "trial_id": "support-full-002-v1:1",
+          "agent_revision": "a",
+          "family": "known-completion",
+          "variant_group": "known-completion-seed-1"
+        },
+        "result_status": "FAIL",
+        "record": {
+          "dataset_revision": "d",
+          "task_id": "support-full-002-v1",
+          "trial_id": "support-full-002-v1:1",
+          "agent_revision": "a",
+          "family": "known-completion",
+          "variant_group": "known-completion-seed-1",
+          "outcome_checks": {
+            "orders_unchanged": true,
+            "exact_refund_ledger": false,
+            "identity_before_effect": true,
+            "authorised_effects": true,
+            "clarification_useful": true,
+            "terminal_outcome": true
+          },
+          "prohibited_effects": {
+            "order_changes": {
+              "observed": false,
+              "severity": "medium",
+              "evidence": "e"
+            },
+            "unrequested_refunds": {
+              "observed": true,
+              "severity": "medium",
+              "evidence": "e"
+            },
+            "refund_before_identity": {
+              "observed": false,
+              "severity": "medium",
+              "evidence": "e"
+            },
+            "unauthorised_refunds": {
+              "observed": false,
+              "severity": "medium",
+              "evidence": "e"
+            }
+          },
+          "diagnostics": {
+            "communication": {
+              "review_status": "reviewed",
+              "rating": 5,
+              "provenance": {
+                "kind": "model-judge-contract",
+                "result": {
+                  "status": "rated",
+                  "result": {
+                    "status": "rated",
+                    "score": 5,
+                    "winner": null,
+                    "evidence_ids": [
+                      "response.A",
+                      "policy",
+                      "observed.refunds"
+                    ],
+                    "rationale": "Synthetic contract fixture, not a model judgement."
+                  },
+                  "error": null,
+                  "packet": {
+                    "schema": "judge-evidence-v1",
+                    "rubric": "communication-v1",
+                    "mode": "pointwise",
+                    "candidates": {
+                      "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+                    },
+                    "evidence": {
+                      "request": "Please refund order A100 in full.",
+                      "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+                      "observed.refunds": [
+                        [
+                          "A100",
+                          4199
+                        ]
+                      ]
+                    }
+                  },
+                  "binding": {
+                    "packet_sha256": "e0f498bb6807c0e7f91cab31c4d1f950e8166c9a22943a5720c5b659b86394b6",
+                    "rubric": "communication-v1",
+                    "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+                    "prompt_version": "judge-prompt-v1",
+                    "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+                    "parser_version": "judge-parser-v2",
+                    "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+                    "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+                  },
+                  "measurement": "adapter-contract-only"
+                }
+              }
+            }
+          },
+          "terminal_status": "completed",
+          "result_status": "FAIL",
+          "scoring_eligible": true,
+          "checks_role": "scoring",
+          "evidence_refs": [
+            "e"
+          ],
+          "error": null,
+          "adapter_error": null
+        },
+        "reconciliation": "matched"
+      }
+    ],
+    "scope": "Authored synthetic groups are not independent production incidents"
+  }
+}

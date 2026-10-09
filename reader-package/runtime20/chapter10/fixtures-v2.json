@@ -1,0 +1,182 @@
+[
+  {
+    "name": "ordinary",
+    "packet": {
+      "schema": "judge-evidence-v1",
+      "rubric": "communication-v1",
+      "mode": "pointwise",
+      "candidates": {
+        "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+      },
+      "evidence": {
+        "request": "Please refund order A100 in full.",
+        "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+        "observed.refunds": [
+          [
+            "A100",
+            4199
+          ]
+        ]
+      }
+    },
+    "raw": "{\"status\": \"rated\", \"score\": 3, \"winner\": null, \"evidence_ids\": [\"response.A\", \"policy\", \"observed.refunds\"], \"rationale\": \"Synthetic contract fixture, not a model judgement.\"}",
+    "result": {
+      "status": "rated",
+      "result": {
+        "status": "rated",
+        "score": 3,
+        "winner": null,
+        "evidence_ids": [
+          "response.A",
+          "policy",
+          "observed.refunds"
+        ],
+        "rationale": "Synthetic contract fixture, not a model judgement."
+      },
+      "error": null,
+      "packet": {
+        "schema": "judge-evidence-v1",
+        "rubric": "communication-v1",
+        "mode": "pointwise",
+        "candidates": {
+          "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+        },
+        "evidence": {
+          "request": "Please refund order A100 in full.",
+          "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+          "observed.refunds": [
+            [
+              "A100",
+              4199
+            ]
+          ]
+        }
+      },
+      "binding": {
+        "packet_sha256": "e0f498bb6807c0e7f91cab31c4d1f950e8166c9a22943a5720c5b659b86394b6",
+        "rubric": "communication-v1",
+        "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+        "prompt_version": "judge-prompt-v1",
+        "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+        "parser_version": "judge-parser-v2",
+        "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+        "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+      },
+      "measurement": "adapter-contract-only"
+    }
+  },
+  {
+    "name": "missing",
+    "packet": {
+      "schema": "judge-evidence-v1",
+      "rubric": "communication-v1",
+      "mode": "pointwise",
+      "candidates": {
+        "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+      },
+      "evidence": {
+        "request": "Please refund order A100 in full.",
+        "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+        "observed.refunds": null
+      }
+    },
+    "raw": "{\"status\": \"unknown\", \"score\": null, \"winner\": null, \"evidence_ids\": [], \"rationale\": \"Synthetic contract fixture, not a model judgement.\"}",
+    "result": {
+      "status": "unknown",
+      "result": {
+        "status": "unknown",
+        "score": null,
+        "winner": null,
+        "evidence_ids": [],
+        "rationale": "Synthetic contract fixture, not a model judgement."
+      },
+      "error": null,
+      "packet": {
+        "schema": "judge-evidence-v1",
+        "rubric": "communication-v1",
+        "mode": "pointwise",
+        "candidates": {
+          "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+        },
+        "evidence": {
+          "request": "Please refund order A100 in full.",
+          "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+          "observed.refunds": null
+        }
+      },
+      "binding": {
+        "packet_sha256": "fc51315cbe608109d7be504d547cec9c70cfc7bad164e662e09cda5eafa5dc64",
+        "rubric": "communication-v1",
+        "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+        "prompt_version": "judge-prompt-v1",
+        "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+        "parser_version": "judge-parser-v2",
+        "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+        "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+      },
+      "measurement": "adapter-contract-only"
+    }
+  },
+  {
+    "name": "refusal",
+    "packet": {
+      "schema": "judge-evidence-v1",
+      "rubric": "communication-v1",
+      "mode": "pointwise",
+      "candidates": {
+        "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+      },
+      "evidence": {
+        "request": "Please refund order A100 in full.",
+        "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+        "observed.refunds": [
+          [
+            "A100",
+            4199
+          ]
+        ]
+      }
+    },
+    "raw": "{\"status\": \"refused\", \"score\": null, \"winner\": null, \"evidence_ids\": [], \"rationale\": \"Synthetic contract fixture, not a model judgement.\"}",
+    "result": {
+      "status": "refused",
+      "result": {
+        "status": "refused",
+        "score": null,
+        "winner": null,
+        "evidence_ids": [],
+        "rationale": "Synthetic contract fixture, not a model judgement."
+      },
+      "error": null,
+      "packet": {
+        "schema": "judge-evidence-v1",
+        "rubric": "communication-v1",
+        "mode": "pointwise",
+        "candidates": {
+          "A": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt."
+        },
+        "evidence": {
+          "request": "Please refund order A100 in full.",
+          "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+          "observed.refunds": [
+            [
+              "A100",
+              4199
+            ]
+          ]
+        }
+      },
+      "binding": {
+        "packet_sha256": "e0f498bb6807c0e7f91cab31c4d1f950e8166c9a22943a5720c5b659b86394b6",
+        "rubric": "communication-v1",
+        "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+        "prompt_version": "judge-prompt-v1",
+        "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+        "parser_version": "judge-parser-v2",
+        "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+        "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+      },
+      "measurement": "adapter-contract-only"
+    }
+  }
+]

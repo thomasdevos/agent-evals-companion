@@ -1,0 +1,26 @@
+{
+  "status": "rated",
+  "result": {
+    "status": "rated",
+    "score": 3,
+    "winner": null,
+    "evidence_ids": [
+      "response.A",
+      "policy",
+      "observed.refunds"
+    ],
+    "rationale": "Synthetic contract fixture, not a model judgement."
+  },
+  "error": null,
+  "binding": {
+    "packet_sha256": "e0f498bb6807c0e7f91cab31c4d1f950e8166c9a22943a5720c5b659b86394b6",
+    "rubric": "communication-v1",
+    "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+    "prompt_version": "judge-prompt-v1",
+    "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+    "parser_version": "judge-parser-v1",
+    "parser_sha256": "f70836cc4b61fd61b1b25764700a00268d607c6273c631d85a0b2895868efb32",
+    "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+  },
+  "measurement": "adapter-contract-only"
+}

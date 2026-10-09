@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "id": "<case-id>",
+  "goal": "Resolve a full-refund request for the order the customer identifies.",
+  "provenance": "author-synthetic",
+  "start": {
+    "orders": [
+      [
+        "A100",
+        4200,
+        "paid"
+      ],
+      [
+        "B200",
+        1900,
+        "paid"
+      ]
+    ],
+    "refunds": []
+  },
+  "request": {
+    "text": "<full-refund request>",
+    "order_id": "<A100 or B200>",
+    "scope": "full"
+  },
+  "user_reply": {
+    "text": "No clarification reply scheduled.",
+    "order_id": null
+  },
+  "policy": {
+    "owned_orders": [
+      "A100"
+    ],
+    "eligible_orders": [
+      "A100"
+    ],
+    "refund_mode": "one_full_refund",
+    "clarification": "ask_once_if_missing",
+    "max_actions": 6
+  },
+  "allowed_evidence": [
+    "request",
+    "user_reply",
+    "orders",
+    "policy"
+  ],
+  "required_outcome": {
+    "terminal": "<completed or refused>",
+    "reason": "<full_refund or not_owned>",
+    "refunds": [
+      [
+        "<order-id>",
+        "<integer pence for completion; for refusal replace the whole required_outcome.refunds array with []>"
+      ]
+    ]
+  },
+  "prohibited_effects": [
+    "order_changes",
+    "unrequested_refunds",
+    "refund_before_identity",
+    "unauthorised_refunds"
+  ],
+  "unobservable": [
+    "Bank settlement",
+    "Customer satisfaction",
+    "Private model reasoning"
+  ]
+}

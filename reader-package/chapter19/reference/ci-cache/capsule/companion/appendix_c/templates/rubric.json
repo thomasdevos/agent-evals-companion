@@ -1,0 +1,32 @@
+{
+  "class": "design worksheet",
+  "consumer": "human reviewer; no JSON rubric loader",
+  "rubric": "<new version if anchors change>",
+  "anchors": {
+    "clarity": {
+      "1": "<observable anchor>",
+      "3": "<observable anchor>",
+      "5": "<observable anchor>"
+    },
+    "explanation": {
+      "1": "<observable anchor>",
+      "3": "<observable anchor>",
+      "5": "<observable anchor>"
+    },
+    "escalation": {
+      "1": "<observable anchor>",
+      "3": "<observable anchor>",
+      "5": "<observable anchor>"
+    }
+  },
+  "nonrating": {
+    "score": null,
+    "statuses": [
+      "unavailable",
+      "uncertain",
+      "not-applicable"
+    ]
+  },
+  "authority": "<rubric owner>",
+  "evidence": "chapter09/RUBRIC.md"
+}

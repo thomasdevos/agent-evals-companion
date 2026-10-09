@@ -1,0 +1,10 @@
+{
+  "edition": "2026-10-09-ch07-corrected-reader-derivative",
+  "repository": "https://github.com/thomasdevos/agent-evals-companion",
+  "source_zip_filename": "AI-Agent-Evals-ch07-corrected-companion-20261009.zip",
+  "source_zip_sha256": "afd63bb37999e15dd40e7ecba0eec13fc7aaf40c1b09f5144760325fdc478eb4",
+  "source_manuscript_sha256": "690f0b344f525e0b7319663065cae38373808a42f1d5e1bafcfdcae51c7e9c8e",
+  "status": "private development checkpoint; not a publication release",
+  "license_status": "publication licensing decision pending",
+  "known_open_findings": "Chapter 8 trace validation, aggregation consistency, exercise disclosure and navigation; broader editorial review pending"
+}

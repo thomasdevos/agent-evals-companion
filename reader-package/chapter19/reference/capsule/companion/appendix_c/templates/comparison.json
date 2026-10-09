@@ -1,0 +1,17 @@
+{
+  "schema": "chapter12-plan-v1",
+  "versions": [
+    "old",
+    "new"
+  ],
+  "repeats": 3,
+  "meaningful": "<predeclared numeric threshold>",
+  "seed": "<integer seed>",
+  "reps": 2000,
+  "confidence": 0.95,
+  "min_clusters": 8,
+  "estimand": "equal incident means of equal case means of paired scheduled attempts",
+  "max_analyses": 1,
+  "scope": "authored synthetic; descriptive only",
+  "cluster_basis": "declared incident lineage, not family taxonomy"
+}

@@ -1,0 +1,8 @@
+{
+  "scenario": "hypothetical planning inputs, not measured reviewer effort",
+  "items": 120,
+  "independent_minutes": 960,
+  "adjudication_minutes": 144,
+  "calibration_person_minutes": 120,
+  "total_person_hours": 20.4
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "authority": "synthetic adjudicator fixture",
+    "before": [
+      "uncertain",
+      "positive"
+    ],
+    "changes": "Require ledger evidence explicitly; preserve both original ratings.",
+    "final": "uncertain",
+    "item": "label-uncertain",
+    "reason": "A statement is not a ledger snapshot. Evidence remains unavailable.",
+    "rubric": "v2"
+  }
+]

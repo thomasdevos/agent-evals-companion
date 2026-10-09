@@ -1,0 +1,128 @@
+{
+  "evidence": "authored teaching inputs, not empirical measurements",
+  "wilson_18_20": [
+    0.6989663547715129,
+    0.9721335187862318
+  ],
+  "precision_n": 246,
+  "design_effect": 5.5,
+  "effective_rows": 18.181818181818183,
+  "mcnemar_15_5": {
+    "exact_p": 0.04138946533203125,
+    "corrected_chi2": 4.05,
+    "asymptotic_p": 0.044171344908442614
+  },
+  "mcnemar_30_10": {
+    "exact_p": 0.0022214337732293643,
+    "corrected_chi2": 9.025,
+    "asymptotic_p": 0.0026631192591385546
+  },
+  "kappa": 0.7,
+  "nominal_alpha": 0.5,
+  "holm": {
+    "adjusted": [
+      0.02,
+      0.048,
+      0.05399999999999999,
+      0.08,
+      0.2
+    ],
+    "reject": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "e_path": [
+    {
+      "e": 1.5,
+      "always_valid_p": 0.6666666666666666,
+      "log_e": 0.4054651081081644,
+      "log_always_valid_p": -0.4054651081081644
+    },
+    {
+      "e": 2.25,
+      "always_valid_p": 0.4444444444444444,
+      "log_e": 0.8109302162163288,
+      "log_always_valid_p": -0.8109302162163288
+    },
+    {
+      "e": 3.375,
+      "always_valid_p": 0.2962962962962963,
+      "log_e": 1.2163953243244932,
+      "log_always_valid_p": -1.2163953243244932
+    },
+    {
+      "e": 5.0625,
+      "always_valid_p": 0.19753086419753085,
+      "log_e": 1.6218604324326575,
+      "log_always_valid_p": -1.6218604324326575
+    },
+    {
+      "e": 7.593750000000002,
+      "always_valid_p": 0.13168724279835387,
+      "log_e": 2.027325540540822,
+      "log_always_valid_p": -2.027325540540822
+    },
+    {
+      "e": 11.390625,
+      "always_valid_p": 0.0877914951989026,
+      "log_e": 2.4327906486489863,
+      "log_always_valid_p": -2.4327906486489863
+    },
+    {
+      "e": 17.085937499999996,
+      "always_valid_p": 0.05852766346593508,
+      "log_e": 2.8382557567571505,
+      "log_always_valid_p": -2.8382557567571505
+    },
+    {
+      "e": 25.62890625,
+      "always_valid_p": 0.03901844231062338,
+      "log_e": 3.243720864865315,
+      "log_always_valid_p": -3.243720864865315
+    },
+    {
+      "e": 12.814453125,
+      "always_valid_p": 0.03901844231062338,
+      "log_e": 2.5505736843053697,
+      "log_always_valid_p": -3.243720864865315
+    }
+  ],
+  "cusum": [
+    {
+      "pre_reset": 0.0,
+      "alarm": false,
+      "missing": false
+    },
+    {
+      "pre_reset": 0.5,
+      "alarm": false,
+      "missing": false
+    },
+    {
+      "pre_reset": 1.5,
+      "alarm": false,
+      "missing": false
+    },
+    {
+      "pre_reset": 1.5,
+      "alarm": false,
+      "missing": true
+    },
+    {
+      "pre_reset": 3.0,
+      "alarm": true,
+      "missing": false
+    },
+    {
+      "pre_reset": 0.0,
+      "alarm": false,
+      "missing": false
+    }
+  ],
+  "power_100": 0.5444454279352345,
+  "power_200": 0.8753004831126024
+}

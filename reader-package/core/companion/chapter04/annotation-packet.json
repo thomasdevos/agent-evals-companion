@@ -1,0 +1,74 @@
+{
+  "evidence": [
+    {
+      "case_id": "support-dataset-001-v1",
+      "item": "label-positive",
+      "label": "positive",
+      "observation": "ledger A100:4200; completed; no prohibited effects"
+    },
+    {
+      "case_id": "support-dataset-001-v1",
+      "item": "label-negative",
+      "label": "negative",
+      "observation": "ledger B200:1900; completed; unauthorised refund"
+    },
+    {
+      "case_id": "support-dataset-013-v1",
+      "item": "label-uncertain",
+      "label": "uncertain",
+      "observation": "answer says refunded; ledger snapshot unavailable"
+    }
+  ],
+  "origin": "author-synthetic",
+  "ratings": [
+    {
+      "item": "label-positive",
+      "label": "positive",
+      "origin": "author-synthetic",
+      "rationale": "ledger A100:4200; completed; no prohibited effects",
+      "reviewer": "synthetic-A",
+      "rubric": "v1"
+    },
+    {
+      "item": "label-positive",
+      "label": "positive",
+      "origin": "author-synthetic",
+      "rationale": "ledger A100:4200; completed; no prohibited effects",
+      "reviewer": "synthetic-B",
+      "rubric": "v1"
+    },
+    {
+      "item": "label-negative",
+      "label": "negative",
+      "origin": "author-synthetic",
+      "rationale": "ledger B200:1900; completed; unauthorised refund",
+      "reviewer": "synthetic-A",
+      "rubric": "v1"
+    },
+    {
+      "item": "label-negative",
+      "label": "negative",
+      "origin": "author-synthetic",
+      "rationale": "ledger B200:1900; completed; unauthorised refund",
+      "reviewer": "synthetic-B",
+      "rubric": "v1"
+    },
+    {
+      "item": "label-uncertain",
+      "label": "uncertain",
+      "origin": "author-synthetic",
+      "rationale": "answer says refunded; ledger snapshot unavailable",
+      "reviewer": "synthetic-A",
+      "rubric": "v1"
+    },
+    {
+      "item": "label-uncertain",
+      "label": "positive",
+      "origin": "author-synthetic",
+      "rationale": "answer says refunded; ledger snapshot unavailable",
+      "reviewer": "synthetic-B",
+      "rubric": "v1"
+    }
+  ],
+  "rubric": "v1"
+}

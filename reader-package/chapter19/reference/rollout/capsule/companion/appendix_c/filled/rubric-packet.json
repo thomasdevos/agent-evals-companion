@@ -1,0 +1,16 @@
+{
+  "item": "item-01",
+  "rubric": "communication-v1",
+  "request": "Please refund order A100 in full.",
+  "policy": "Explain the recorded action and any unresolved discrepancy. Escalate an unresolved amount discrepancy to support; do not promise a correction.",
+  "observed": {
+    "response": "Refund recorded for A100. The amount is 4199 pence. Contact support if this differs from your receipt.",
+    "refunds": [
+      [
+        "A100",
+        4199
+      ]
+    ]
+  },
+  "evidence_status": "available"
+}

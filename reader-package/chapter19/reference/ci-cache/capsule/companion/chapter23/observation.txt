@@ -1,0 +1,218 @@
+{
+  "interrupted": {
+    "after": {
+      "orders": [
+        [
+          "A100",
+          4200,
+          "paid"
+        ],
+        [
+          "B200",
+          1900,
+          "paid"
+        ]
+      ],
+      "refunds": [
+        [
+          "A100",
+          4200
+        ]
+      ]
+    },
+    "events": [
+      [
+        1,
+        "intake",
+        "identity",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        2,
+        "intake",
+        "policy",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        3,
+        "intake",
+        "handoff",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        4,
+        "payments",
+        "submit",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        5,
+        "payments",
+        "timeout",
+        "support-v1",
+        "refund-A100-full"
+      ]
+    ],
+    "operations": [
+      [
+        "support-v1",
+        "refund-A100-full",
+        "A100",
+        4200,
+        "payments"
+      ]
+    ],
+    "memory": [
+      [
+        "refund_status",
+        "not_started"
+      ]
+    ],
+    "memory_observations": []
+  },
+  "final": {
+    "after": {
+      "orders": [
+        [
+          "A100",
+          4200,
+          "paid"
+        ],
+        [
+          "B200",
+          1900,
+          "paid"
+        ]
+      ],
+      "refunds": [
+        [
+          "A100",
+          4200
+        ],
+        [
+          "A100",
+          4200
+        ]
+      ]
+    },
+    "events": [
+      [
+        1,
+        "intake",
+        "identity",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        2,
+        "intake",
+        "policy",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        3,
+        "intake",
+        "handoff",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        4,
+        "payments",
+        "submit",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        5,
+        "payments",
+        "timeout",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        6,
+        "payments",
+        "memory",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        7,
+        "payments",
+        "reconcile",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        8,
+        "payments",
+        "submit",
+        "support-v1",
+        "refund-A100-full"
+      ],
+      [
+        9,
+        "payments",
+        "confirm",
+        "support-v1",
+        "refund-A100-full"
+      ]
+    ],
+    "operations": [
+      [
+        "support-v1",
+        "refund-A100-full",
+        "A100",
+        4200,
+        "payments"
+      ]
+    ],
+    "memory": [
+      [
+        "refund_status",
+        "confirmed"
+      ]
+    ],
+    "memory_observations": [
+      [
+        6,
+        "support-v1",
+        "refund-A100-full",
+        "refund_status",
+        "not_started"
+      ]
+    ]
+  },
+  "retrieval": {
+    "component": "undated",
+    "ranking": [
+      [
+        "refund",
+        "2025",
+        "eligibility"
+      ],
+      [
+        "refund",
+        "2026",
+        "eligibility"
+      ]
+    ],
+    "metrics": {
+      "hits": 1,
+      "returned": 2,
+      "relevant": 2,
+      "precision_at_k": 0.5,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 0.5,
+      "no_answer_retrieval": null,
+      "obsolete_returned": 1
+    },
+    "attempts": 1
+  }
+}

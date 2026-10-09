@@ -1,0 +1,32 @@
+{
+  "class": "design worksheet",
+  "consumer": "human reviewer; no JSON rubric loader",
+  "rubric": "communication-v1",
+  "anchors": {
+    "clarity": {
+      "1": "Action or next step cannot be identified",
+      "3": "Action identifiable, important detail needs inference",
+      "5": "Action, affected order and any next step explicit"
+    },
+    "explanation": {
+      "1": "Unsupported assurance or no relevant reason",
+      "3": "Relevant fact, incomplete decision link",
+      "5": "Decision linked to supplied facts and limits stated"
+    },
+    "escalation": {
+      "1": "Necessary help absent or unauthorised promise",
+      "3": "Destination named, issue or follow-up unclear",
+      "5": "Unresolved issue and permitted destination explicit, no unauthorised promise"
+    }
+  },
+  "nonrating": {
+    "score": null,
+    "statuses": [
+      "unavailable",
+      "uncertain",
+      "not-applicable"
+    ]
+  },
+  "authority": "synthetic teaching author",
+  "evidence": "chapter09/RUBRIC.md"
+}

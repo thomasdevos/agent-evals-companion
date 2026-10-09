@@ -1,0 +1,16 @@
+{
+  "name": "Offline delivery evidence teaching workflow",
+  "on": {"workflow_dispatch": {}},
+  "permissions": {"contents": "read"},
+  "jobs": {
+    "offline": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 10,
+      "steps": [
+        {"uses": "actions/checkout@v4"},
+        {"uses": "actions/setup-python@v5", "with": {"python-version": "3.11"}},
+        {"name": "Run offline assertions and expected refusals", "working-directory": "reader-package/chapter19/reference/ci-cache", "env": {"PYTHONDONTWRITEBYTECODE": "1"}, "run": "python3 verify.py evidence/ci-${{ github.run_id }}-${{ github.run_attempt }}"}
+      ]
+    }
+  }
+}

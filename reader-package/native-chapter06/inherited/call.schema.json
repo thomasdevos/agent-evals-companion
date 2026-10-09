@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-evals:provider-cassette-import-v2",
+  "title": "Authored provider call record",
+  "type": "object",
+  "required": ["schema", "identity", "attempt", "provider", "provenance", "timestamp", "request", "request_sha256", "requested_model", "served_model", "response", "tools", "usage", "error", "model_cost", "price_source", "elapsed_local_seconds"],
+  "properties": {
+    "schema": {"const": "provider-cassette-import-v2"},
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["experiment_id", "case_id", "trial_id", "trial_index", "companion_version", "versions"],
+      "properties": {
+        "experiment_id": {"type": "string", "minLength": 1},
+        "case_id": {"type": "string", "minLength": 1},
+        "trial_id": {"type": "string", "minLength": 1},
+        "trial_index": {"type": "integer", "minimum": 1, "maximum": 5},
+        "companion_version": {"const": "provider-cassette-import-v2"},
+        "versions": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+      }
+    },
+    "attempt": {"type": "integer", "minimum": 1, "maximum": 8},
+    "provider": {"enum": ["openai-responses-shaped", "anthropic-messages-shaped"]},
+    "provenance": {"const": "authored-fixture-not-model-output"},
+    "timestamp": {"type": "string"},
+    "request": {"type": "object"},
+    "request_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "requested_model": {"const": "authored-support-v1"},
+    "served_model": {"enum": ["authored-support-v1", null]},
+    "response": {"type": ["object", "null"]},
+    "tools": {"type": "array"},
+    "usage": {
+      "type": "object",
+      "required": ["state", "input_tokens", "output_tokens"],
+      "properties": {
+        "state": {"enum": ["known_authored", "unknown", "invalid"]},
+        "input_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "output_tokens": {"type": ["integer", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "error": {"enum": [null, "transport_error", "contract_error"]},
+    "model_cost": {"type": "null"},
+    "price_source": {"type": "null"},
+    "elapsed_local_seconds": {"type": "number", "minimum": 0}
+  },
+  "additionalProperties": false
+}

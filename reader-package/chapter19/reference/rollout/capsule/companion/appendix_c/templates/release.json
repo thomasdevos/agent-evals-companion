@@ -1,0 +1,10 @@
+{
+  "class": "design worksheet",
+  "consumer": "human release owner; collect/decide produces evidence separately",
+  "scenario": "<supported offline scenario>",
+  "candidate": "<candidate under review>",
+  "evidence_locator": "<generated packet path>",
+  "requested_scope": "<requested permission>",
+  "business_approval": "REQUIRED_SEPARATELY",
+  "unresolved": "<open decisions>"
+}

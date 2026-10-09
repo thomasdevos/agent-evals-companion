@@ -1,0 +1,18 @@
+{
+  "schema": "policy-dataset-v1",
+  "passages": [
+    {"document":"refund","revision":"2025","passage":"eligibility","start":"2025-01-01","end":"2026-01-01","text":"Standard refund eligibility allows owned purchases within thirty days. Standard refund policy eligibility details.","claims":["Owned purchases within thirty days qualify."]},
+    {"document":"refund","revision":"2026","passage":"eligibility","start":"2026-01-01","end":"2027-01-01","text":"Standard refund eligibility allows owned purchases within fourteen days.","claims":["Owned purchases within fourteen days qualify."]},
+    {"document":"refund","revision":"2026","passage":"identity","start":"2026-01-01","end":"2027-01-01","text":"Standard refund requires an identified order before any payment.","claims":["Identify the order before payment."]},
+    {"document":"exception","revision":"A","passage":"damaged","start":"2026-01-01","end":"2027-01-01","text":"Damaged special items qualify for refund.","claims":["Damaged special items qualify."]},
+    {"document":"exception","revision":"B","passage":"damaged","start":"2026-01-01","end":"2027-01-01","text":"Damaged special items do not qualify for refund.","claims":["Damaged special items do not qualify."]},
+    {"document":"shipping","revision":"2026","passage":"delay","start":"2026-01-01","end":"2027-01-01","text":"Shipping delay claims need the carrier report. Compensation amount is unspecified.","claims":["A carrier report is required."]}
+  ],
+  "queries": [
+    {"dataset":"policy-v1","query":"current","as_of":"2026-02-01","text":"Standard refund eligibility for an owned purchase ten days ago","relevant":[["refund","2026","eligibility"],["refund","2026","identity"]],"expected":"eligible","required_claims":["Owned purchases within fourteen days qualify.","Identify the order before payment."],"condition":"answerable"},
+    {"dataset":"policy-v1","query":"historic","as_of":"2025-06-01","text":"Standard refund eligibility for an owned purchase twenty days ago","relevant":[["refund","2025","eligibility"]],"expected":"eligible","required_claims":["Owned purchases within thirty days qualify."],"condition":"answerable"},
+    {"dataset":"policy-v1","query":"conflict","as_of":"2026-02-01","text":"Damaged special items refund","relevant":[["exception","A","damaged"],["exception","B","damaged"]],"expected":"unknown","required_claims":[],"condition":"conflict"},
+    {"dataset":"policy-v1","query":"incomplete","as_of":"2026-02-01","text":"Shipping delay compensation amount carrier report","relevant":[["shipping","2026","delay"]],"expected":"unknown","required_claims":[],"condition":"incomplete"},
+    {"dataset":"policy-v1","query":"absent","as_of":"2026-02-01","text":"Lunar insurance premium","relevant":[],"expected":"unknown","required_claims":[],"condition":"absent"}
+  ]
+}

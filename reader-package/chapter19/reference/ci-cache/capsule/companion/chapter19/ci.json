@@ -1,0 +1,9 @@
+{
+  "schema": "chapter18-local-ci-v2",
+  "required_jobs": ["code", "support"],
+  "entrypoint": ["-m", "chapter19.delivery", "ci"],
+  "fast": {"enabled": true, "trigger": "each change (descriptive)", "jobs": ["code", "support"], "provider_calls": 0, "max_scheduled_trials": 3, "scenario_matrix": false},
+  "scheduled": {"enabled": true, "trigger": "explicit local invocation (descriptive)", "jobs": ["code", "support", "comparison"], "provider_calls": 0, "max_scheduled_trials": 6, "scenario_matrix": false},
+  "live": {"enabled": false, "authorisation": null, "budget": null},
+  "hosted_execution": "NOT_RUN"
+}

@@ -1,0 +1,175 @@
+{
+  "schema": "scorecard-v1",
+  "scheduled_trials": 1,
+  "observed_trials": 1,
+  "passed": 0,
+  "failed": 1,
+  "errors": 0,
+  "missing": 0,
+  "status_counts": {
+    "FAIL": 1
+  },
+  "trial_weighted_success": 0.0,
+  "measured_only_success": 0.0,
+  "measured_only_denominator": 1,
+  "scheduled_tasks": 1,
+  "task_weighted_success": 0.0,
+  "authored_families": 1,
+  "authored_groups": 1,
+  "communication": {
+    "counts": {
+      "reviewed": 1
+    },
+    "denominator": 1,
+    "mean": 5.0
+  },
+  "prohibited_effects": {
+    "order_changes": {
+      "counts": {
+        "absent": 1
+      },
+      "assessable": 1,
+      "scheduled": 1,
+      "incidence": 0.0
+    },
+    "unrequested_refunds": {
+      "counts": {
+        "observed": 1
+      },
+      "assessable": 1,
+      "scheduled": 1,
+      "incidence": 1.0
+    },
+    "refund_before_identity": {
+      "counts": {
+        "absent": 1
+      },
+      "assessable": 1,
+      "scheduled": 1,
+      "incidence": 0.0
+    },
+    "unauthorised_refunds": {
+      "counts": {
+        "absent": 1
+      },
+      "assessable": 1,
+      "scheduled": 1,
+      "incidence": 0.0
+    }
+  },
+  "records": [
+    {
+      "slot": {
+        "dataset_revision": "chapter08-fixture",
+        "task_id": "support-full-002-v1",
+        "trial_id": "support-full-002-v1:1",
+        "agent_revision": "bold-agent",
+        "family": "known-completion",
+        "variant_group": "known-completion-seed-1",
+        "outcome_checks": {
+          "orders_unchanged": true,
+          "exact_refund_ledger": false,
+          "identity_before_effect": true,
+          "authorised_effects": true,
+          "clarification_useful": true,
+          "terminal_outcome": true
+        },
+        "prohibited_effects": {
+          "order_changes": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "unrequested_refunds": {
+            "observed": true,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "refund_before_identity": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "unauthorised_refunds": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          }
+        },
+        "diagnostics": {
+          "communication": {
+            "review_status": "reviewed",
+            "rating": 5,
+            "provenance": "authored-synthetic-fixture-not-human:maximal-counterexample"
+          }
+        },
+        "terminal_status": "completed",
+        "result_status": "FAIL",
+        "scoring_eligible": true,
+        "checks_role": "scoring",
+        "evidence_refs": [
+          "admin/authoritative.json"
+        ],
+        "error": null,
+        "adapter_error": null
+      },
+      "result_status": "FAIL",
+      "record": {
+        "dataset_revision": "chapter08-fixture",
+        "task_id": "support-full-002-v1",
+        "trial_id": "support-full-002-v1:1",
+        "agent_revision": "bold-agent",
+        "family": "known-completion",
+        "variant_group": "known-completion-seed-1",
+        "outcome_checks": {
+          "orders_unchanged": true,
+          "exact_refund_ledger": false,
+          "identity_before_effect": true,
+          "authorised_effects": true,
+          "clarification_useful": true,
+          "terminal_outcome": true
+        },
+        "prohibited_effects": {
+          "order_changes": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "unrequested_refunds": {
+            "observed": true,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "refund_before_identity": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          },
+          "unauthorised_refunds": {
+            "observed": false,
+            "severity": "medium",
+            "evidence": "admin/authoritative.json"
+          }
+        },
+        "diagnostics": {
+          "communication": {
+            "review_status": "reviewed",
+            "rating": 5,
+            "provenance": "authored-synthetic-fixture-not-human:maximal-counterexample"
+          }
+        },
+        "terminal_status": "completed",
+        "result_status": "FAIL",
+        "scoring_eligible": true,
+        "checks_role": "scoring",
+        "evidence_refs": [
+          "admin/authoritative.json"
+        ],
+        "error": null,
+        "adapter_error": null
+      },
+      "reconciliation": "matched"
+    }
+  ],
+  "scope": "Authored synthetic groups are not independent production incidents"
+}

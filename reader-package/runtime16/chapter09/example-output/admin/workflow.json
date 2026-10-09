@@ -1,0 +1,96 @@
+{
+  "status": "complete",
+  "missing": [],
+  "disagreements": [
+    "escalation"
+  ],
+  "pending": [],
+  "independent_ratings": [
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-A",
+      "criterion": "clarity",
+      "score": 5,
+      "evidence_status": "available",
+      "reason": "The action, order and amount are explicit.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    },
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-A",
+      "criterion": "explanation",
+      "score": 3,
+      "evidence_status": "available",
+      "reason": "The answer states the amount but leaves comparison to the customer.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    },
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-A",
+      "criterion": "escalation",
+      "score": 3,
+      "evidence_status": "available",
+      "reason": "Contact support supplies a destination but leaves the discrepancy conditional.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    },
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-B",
+      "criterion": "clarity",
+      "score": 5,
+      "evidence_status": "available",
+      "reason": "The action, order and amount are explicit.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    },
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-B",
+      "criterion": "explanation",
+      "score": 3,
+      "evidence_status": "available",
+      "reason": "The answer states the amount but leaves comparison to the customer.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    },
+    {
+      "item": "item-01",
+      "reviewer": "synthetic-B",
+      "criterion": "escalation",
+      "score": 1,
+      "evidence_status": "available",
+      "reason": "Authored rubric misapplication: treats the conditional \"if this differs\" as absent help despite \"Contact support\" naming a destination; confuses unclear issue with no destination.",
+      "evidence_ref": "observed.response",
+      "rubric": "communication-v1",
+      "packet_hash": "5b869cae9958303bd46b0142dc0861bef8d5cc159e34b5328e9932ee55aca6de",
+      "provenance": "authored-synthetic-fixture-not-human"
+    }
+  ],
+  "adjudications": [
+    {
+      "criterion": "escalation",
+      "prior_hashes": [
+        "b4677c003953a1837be8ed0d0be9a71916860862f104c1f8dc36a2163ab5e354",
+        "aef02d955d0555f3d382b22745ebc0f78b7f8d7e984240ca89ad7e61de84c633"
+      ],
+      "score": 3,
+      "evidence_status": "available",
+      "reason": "Correct the synthetic-B rubric misapplication: \"Contact support\" names a destination, so help is not absent. The conditional \"if this differs\" leaves the issue and follow-up unclear, matching anchor 3 rather than 1 or 5.",
+      "authority": "synthetic-adjudicator",
+      "provenance": "authored-synthetic-fixture-not-human"
+    }
+  ]
+}

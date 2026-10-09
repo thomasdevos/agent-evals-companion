@@ -1,0 +1,10 @@
+{
+  "class": "design worksheet",
+  "consumer": "human release owner; collect/decide produces evidence separately",
+  "scenario": "pass",
+  "candidate": "scripted-support-v1",
+  "evidence_locator": "<new output>/release-pass.json",
+  "requested_scope": "read-only technical review",
+  "business_approval": "REQUIRED_SEPARATELY",
+  "unresolved": "Production authorisation and external validity are not established."
+}

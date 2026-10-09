@@ -1,0 +1,221 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "string",
+      "const": "author-synthetic"
+    },
+    "start": {
+      "type": "object",
+      "properties": {
+        "orders": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "integer"
+              ]
+            }
+          }
+        },
+        "refunds": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "integer"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "orders",
+        "refunds"
+      ],
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "A100",
+            "B200",
+            null
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "text",
+        "order_id",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "user_reply": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "order_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "A100",
+            "B200",
+            null
+          ]
+        }
+      },
+      "required": [
+        "text",
+        "order_id"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "owned_orders": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "eligible_orders": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "refund_mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clarification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "max_actions": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "owned_orders",
+        "eligible_orders",
+        "refund_mode",
+        "clarification",
+        "max_actions"
+      ],
+      "additionalProperties": false
+    },
+    "allowed_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_outcome": {
+      "type": "object",
+      "properties": {
+        "terminal": {
+          "type": "string",
+          "enum": [
+            "completed",
+            "refused"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "refunds": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "integer"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "terminal",
+        "reason",
+        "refunds"
+      ],
+      "additionalProperties": false
+    },
+    "prohibited_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unobservable": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "version",
+    "id",
+    "goal",
+    "provenance",
+    "start",
+    "request",
+    "user_reply",
+    "policy",
+    "allowed_evidence",
+    "required_outcome",
+    "prohibited_effects",
+    "unobservable"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chapter 2 task card v1"
+}

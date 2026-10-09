@@ -1,0 +1,14 @@
+[
+  {
+    "criterion": "escalation",
+    "prior_hashes": [
+      "b4677c003953a1837be8ed0d0be9a71916860862f104c1f8dc36a2163ab5e354",
+      "aef02d955d0555f3d382b22745ebc0f78b7f8d7e984240ca89ad7e61de84c633"
+    ],
+    "score": 3,
+    "evidence_status": "available",
+    "reason": "Correct the synthetic-B rubric misapplication: \"Contact support\" names a destination, so help is not absent. The conditional \"if this differs\" leaves the issue and follow-up unclear, matching anchor 3 rather than 1 or 5.",
+    "authority": "synthetic-adjudicator",
+    "provenance": "authored-synthetic-fixture-not-human"
+  }
+]

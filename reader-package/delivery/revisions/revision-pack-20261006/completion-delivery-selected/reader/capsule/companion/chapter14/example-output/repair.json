@@ -1,0 +1,211 @@
+{
+  "schema": "retrieval-report-v1",
+  "dataset_sha256": "d9b938ee5cab5106cad89a57ef2f8f9bdb7f8532c9f467318d9dad7d5efc2b00",
+  "config": {
+    "schema": "retrieval-config-v1",
+    "k": 2,
+    "ranking": "token-overlap-stable-identity",
+    "interval": "start-inclusive-end-exclusive",
+    "judge": "authored-claim-reference-v1"
+  },
+  "config_sha256": "8e01e2b404b28a2777cb6512f24d3a7b825cab727c30eeabdfd14a60e2c4fec8",
+  "retriever": "dated",
+  "scheduled_queries": 5,
+  "recall_eligible_queries": 4,
+  "macro_recall": 1.0,
+  "rows": [
+    {
+      "dataset": "policy-v1",
+      "query": "current",
+      "ranking": [
+        [
+          "refund",
+          "2026",
+          "eligibility"
+        ],
+        [
+          "refund",
+          "2026",
+          "identity"
+        ]
+      ],
+      "retrieval": {
+        "hits": 2,
+        "returned": 2,
+        "relevant": 2,
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "no_answer_retrieval": null,
+        "obsolete_returned": 0
+      }
+    },
+    {
+      "dataset": "policy-v1",
+      "query": "historic",
+      "ranking": [
+        [
+          "refund",
+          "2025",
+          "eligibility"
+        ]
+      ],
+      "retrieval": {
+        "hits": 1,
+        "returned": 1,
+        "relevant": 1,
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "no_answer_retrieval": null,
+        "obsolete_returned": 0
+      }
+    },
+    {
+      "dataset": "policy-v1",
+      "query": "conflict",
+      "ranking": [
+        [
+          "exception",
+          "A",
+          "damaged"
+        ],
+        [
+          "exception",
+          "B",
+          "damaged"
+        ]
+      ],
+      "retrieval": {
+        "hits": 2,
+        "returned": 2,
+        "relevant": 2,
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "no_answer_retrieval": null,
+        "obsolete_returned": 0
+      }
+    },
+    {
+      "dataset": "policy-v1",
+      "query": "incomplete",
+      "ranking": [
+        [
+          "shipping",
+          "2026",
+          "delay"
+        ]
+      ],
+      "retrieval": {
+        "hits": 1,
+        "returned": 1,
+        "relevant": 1,
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "no_answer_retrieval": null,
+        "obsolete_returned": 0
+      }
+    },
+    {
+      "dataset": "policy-v1",
+      "query": "absent",
+      "ranking": [],
+      "retrieval": {
+        "hits": 0,
+        "returned": 0,
+        "relevant": 0,
+        "precision_at_k": 0.0,
+        "recall_at_k": null,
+        "reciprocal_rank": null,
+        "no_answer_retrieval": false,
+        "obsolete_returned": 0
+      }
+    }
+  ],
+  "counterexample": {
+    "candidate": {
+      "status": "answered",
+      "answer": "eligible",
+      "claims": [
+        {
+          "text": "All purchases qualify automatically.",
+          "citations": [
+            [
+              "refund",
+              "2026",
+              "eligibility"
+            ]
+          ]
+        }
+      ]
+    },
+    "naive_verdict": "PASS",
+    "claim_evidence": {
+      "status": "FAIL",
+      "answer_correct": true,
+      "support_fraction": 0.0,
+      "required_claims_present": false,
+      "claims": [
+        {
+          "text": "All purchases qualify automatically.",
+          "supported": false,
+          "citations": [
+            [
+              "refund",
+              "2026",
+              "eligibility"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "inherited_judge_contract": {
+    "status": "rated",
+    "result": {
+      "status": "rated",
+      "score": 3,
+      "winner": null,
+      "evidence_ids": [
+        "response.A",
+        "policy",
+        "observed.refunds"
+      ],
+      "rationale": "Synthetic contract fixture, not a model judgement."
+    },
+    "error": null,
+    "packet": {
+      "schema": "judge-evidence-v1",
+      "rubric": "communication-v1",
+      "mode": "pointwise",
+      "candidates": {
+        "A": "Eligible. All purchases qualify automatically."
+      },
+      "evidence": {
+        "request": "Please refund order A100 in full.",
+        "policy": "Standard refund eligibility allows owned purchases within fourteen days.\nStandard refund requires an identified order before any payment.",
+        "observed.refunds": [
+          [
+            "A100",
+            4199
+          ]
+        ]
+      }
+    },
+    "binding": {
+      "packet_sha256": "6bce5fcf39a92146e505c523d01907d360dc30eba167a613b9a88fa409ab2723",
+      "rubric": "communication-v1",
+      "rubric_sha256": "17c163bb1dd9206b02fa4a36a952e3b09f4410435b58964c54f2511d20de3242",
+      "prompt_version": "judge-prompt-v1",
+      "prompt_sha256": "defc7b4a26cae7003023bd3de81b74400f6e149ca358db7b3b9944abbff7fa3e",
+      "parser_version": "judge-parser-v2",
+      "parser_sha256": "5ceed80b08abdd94de4e9ed33fc94115f19b762cf47aacbca46af3b03ae539b6",
+      "schema_sha256": "efb5ed61a618aed3bd96c3336ae2a2ad43850337ab26f78823ed387f7af13a70"
+    },
+    "measurement": "adapter-contract-only"
+  },
+  "measurement": "synthetic retrieval and authored claim-reference checks only",
+  "gate": "UNSUPPORTED_EXPLANATION_DETECTED"
+}

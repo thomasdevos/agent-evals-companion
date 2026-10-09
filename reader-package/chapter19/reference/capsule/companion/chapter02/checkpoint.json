@@ -1,0 +1,23 @@
+{
+  "checkpoint": "chapter02-v1",
+  "status": "candidate-for-independent-review",
+  "hash_algorithm": "sha256",
+  "path_base": "companion/",
+  "files": {
+    "first_eval.py": "c8329280f5d134f210c348a424e4b9186cf650643f86fe8972a2719487e06c65",
+    "test_first_eval.py": "8dd08b62cade2661cffe710cda2f8030f8c5f08cba7496f84f1de2543d023a4d",
+    "chapter02/CHECKPOINT.md": "474bf660488dc5a16290bf94404b743edb322f7c7c406b79f734b7493401a12b",
+    "chapter02/README.md": "025fee2fcf13fe7f005d2133511eaafa1900cfcc53ffc519547d87ab159c9c34",
+    "chapter02/cards/ambiguous.json": "11ccb842ee53c8408eabcacbe94d2c6f9b22d97c373be32e620dacb3a6b8a571",
+    "chapter02/cards/clarify.json": "628cb98411f018d25c5f2ec1579b1c03a1a1a1ba2ff9e2bc197f29a810ee829b",
+    "chapter02/cards/full.json": "5a5da22005bdd44e180687526e8009523f403a568e8f7b378250c97a40415e44",
+    "chapter02/cards/refuse.json": "6afcbc9575632f02309acee9ef043baf23da3ded4766d9d89f5f7b0be423d36f",
+    "chapter02/requirements.md": "009fb72ae0ecdb32237b598db39c7ac29ef3b352fcbb2d22939fb97136383c5a",
+    "chapter02/task.schema.json": "b8f7b6ea21f8c5e9fff45ecc8c2eb7c5038a360f813f0f50eeb6cfef9ff20a39",
+    "chapter02/task_lab.py": "11b1e7d2dbc59bd3896a8b45e12a6fa8a6eedb489e734fe572c981bd4e543221",
+    "chapter02/test_task_lab.py": "cf993f9f1bdad6939e68003157424db5ba712548f718ba03dc4a7061f13bfa20"
+  },
+  "excluded": [
+    "chapter02/checkpoint.json (self-reference)"
+  ]
+}
