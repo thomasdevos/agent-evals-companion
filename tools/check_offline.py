@@ -30,8 +30,9 @@ def cases():
         ('native06', ['6-native', '--', '-B', '-m', 'unittest', 'discover', '-v'], 0),
         ('appendixE', ['E', '--', '-m', 'unittest', '-v', 'test_statistics', 'test_numerical'], 0),
         ('native-demo', ['6-native', '--', '-B', 'task_demo.py'], 0),
-        ('delivery-integration', ['19', '--', '-m', 'unittest', '-v', 'test_integration'], 0),
-        ('delivery-demo', ['19', '--', 'integration.py'], 0),
+        ('delivery-integration', ['rollout', '--', '-m', 'unittest', '-v', 'test_integration'], 0),
+        ('delivery-demo', ['rollout', '--', 'integration.py'], 0),
+        ('live-kit', ['-m', 'unittest', '-v', 'live.test_live_run', 'live.test_safety'], 0),
     ])
     for agent, expected in [('corrected', 0), ('baseline', 1), ('duplicate', 1), ('crash', 2)]:
         result.append((agent, ['1', '--', 'first_eval.py', '--agent', agent], expected))
@@ -49,7 +50,7 @@ def main():
         logs.mkdir(parents=True, exist_ok=False)
     records = []
     for name, args, expected in cases():
-        argv = [sys.executable, 'run.py', *args]
+        argv = [sys.executable, *([] if name == 'live-kit' else ['run.py']), *args]
         run = subprocess.run(argv, cwd=READER, env=env, capture_output=True, text=True, timeout=180)
         counts = re.findall(r'Ran (\d+) tests? in ', run.stderr)
         ok = run.returncode == expected

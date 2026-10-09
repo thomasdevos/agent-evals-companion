@@ -1,6 +1,6 @@
-# Agent Evals companion
+# AI Agent Evals companion
 
-Reader code for Thomas De Vos's *Agent Evals*: https://github.com/thomasdevos/agent-evals-companion
+Reader code for Thomas De Vos's *AI Agent Evals*: https://github.com/thomasdevos/agent-evals-companion
 
 This repository is private during development. Access requires an invitation and an authenticated GitHub account. A 404 while signed out does not mean the address is wrong. This is the 9 October 2026 integrated correction checkpoint, not a publication release or a claim that all chapters have passed editorial review. See [edition.json](edition.json) for the source identity and [known limitations](#known-limitations).
 
@@ -68,11 +68,15 @@ From the repository root:
 python3 tools/check_offline.py
 ```
 
-This runs each current chapter's named suite, Appendix E, the native Chapter 6 suite and first-lab positive/negative controls. It verifies expected exit statuses and reports test invocations. It is a local regression check, not independent editorial acceptance or a benchmark of a model. It writes only the labs' temporary/generated outputs. Run it in a disposable clone if you want to preserve your own experiment outputs.
+This runs each current chapter's named suite, Appendix E, the native Chapter 6 suite, the live kit's offline fake-provider and safety suites, and first-lab positive/negative controls. It verifies expected exit statuses and reports observed test invocations rather than a fixed historical count. It is a local regression check, not independent editorial acceptance or a benchmark of a model. It writes only the labs' temporary/generated outputs. Run it in a disposable clone if you want to preserve your own experiment outputs.
 
 No GitHub Actions workflow is installed. The inherited `ci-example.yaml` files are inert teaching examples, reviewed as examples but not enabled as hosted workflows. They do not deploy, spend money or provide evidence that hosted CI passed.
 
 ## Offline and live boundaries
+
+### Run against real models
+
+Use [reader-package/live/README.md](reader-package/live/README.md) for the sole recommended full-run path: `live/live_run.py`, separate from the offline launcher. It sends requests only with `--authorise-live`; `--dry-run` uses authored fakes and omitting both flags is plan-only. The legacy Chapter 5 entry point also can send requests (one task, OpenAI only, no spending ceiling); it is not the recommended full-run command. This checkpoint includes no live run or provider-compatibility evidence. Read the kit's conditional budget and capture-privacy limitations before approving any spend.
 
 The supplied observations and provider envelopes are authored fixtures. Local SQLite writes, grading, capture and replay are real local execution; their results say nothing about a live model's quality or current provider compatibility. The launcher rejects explicit live-provider arguments, but it is not a security sandbox and can execute arbitrary Python. The underlying Chapter 5 code retains a live interface for a separately approved experiment. Do not bypass the launcher or add credentials as a setup step. Live use requires a reviewed command, current SDK/API checks, privacy controls and explicit spending approval.
 
@@ -107,7 +111,7 @@ python3 run.py 23 -- -m unittest discover -s chapter23 -p 'test_identity_review.
 
 `failure` deliberately exits 1; the other commands exit 0. Pass `-O` after `--` to optimise the child. The five-case queue remains separate from the original 100 authored review records.
 
-The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on complete evidence"; the complete rollout lesson follows Chapter 22 as the unnumbered "Roll out and roll back" interlude. Its existing code remains under selector `19`; no package renumbering is required.
+The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on complete evidence"; the complete rollout lesson follows Chapter 22 as the unnumbered "Roll out and roll back" interlude. Run its commands with `python3 run.py rollout -- ...` from `reader-package/`. Selector `rollout` aliases `19` without renumbering packages; delivery-capsule commands retain `19 --delivery-capsule`.
 
 ## Known limitations
 

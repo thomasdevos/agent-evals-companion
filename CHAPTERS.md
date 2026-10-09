@@ -23,6 +23,7 @@ Run commands from `reader-package/`. The paths below are relative to that direct
 | `17` | `core/companion` |
 | `18` | `core/companion` |
 | `19` | `delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader` |
+| `rollout` | `delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader` (alias of `19`) |
 | `20` | `runtime20` |
 | `21` | `core/companion` |
 | `22` | `runtime22` |
@@ -32,3 +33,5 @@ Run commands from `reader-package/`. The paths below are relative to that direct
 | `6-native` | `native-chapter06` |
 
 Chapter 19 adds `--delivery-capsule` before `--` for its `capsule/companion` submodule. Appendix G uses its own disposable copy, as described in the book.
+
+For the rollout interlude: `python3 run.py rollout -- integration.py` and `python3 run.py rollout -- -m unittest -v test_integration`. This remains offline; live-model runs use the separate [live kit](reader-package/live/README.md).

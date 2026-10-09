@@ -11,3 +11,5 @@ __pycache__/
 **/results/
 **/output/
 **/evidence/
+reader-package/live/results/
+reader-package/live/plan-*.json

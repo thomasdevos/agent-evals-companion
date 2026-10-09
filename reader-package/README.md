@@ -1,5 +1,7 @@
 # Reader package
 
+Reader code for **AI Agent Evals**. The [live kit](live/README.md) is the separate recommended full-run path, with plan-only default and offline rehearsal. Legacy Chapter 5 can also send real requests; neither route is part of normal offline setup. The rollout interlude uses `python3 run.py rollout -- integration.py`; `rollout` aliases selector `19`.
+
 Start with the repository [README](../README.md) for setup, edition matching, known limitations and expected failure exits. Run book commands from this directory. Record Chapter 1's prediction and Chapter 6's opening predictions before opening their implementations or demonstrations.
 
 `python3 run.py 1 -- first_eval.py --agent corrected --output results/my-corrected.json`

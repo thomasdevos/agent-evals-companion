@@ -17,6 +17,8 @@ Expected exits in order: 0, 1, 0, 0, 2, 2, 0, 2. Fault exits are intentional. Re
 
 ## Optional live invocation, not authorised or executed here
 
+This legacy entry point sends at most one task to one OpenAI model and has no monetary ceiling. For the recommended full run with conditional cost reservation and durable capture, use [the live kit](../../../live/README.md) from `reader-package/`, outside `run.py`. Its byte-based reservation is not a provider billing guarantee. Rehearse offline and read its privacy/authorization requirements first.
+
 Supply OPENAI_API_KEY securely through the environment, and OPENAI_MODEL with the explicitly approved model identifier. Do not print either credential or headers. Agree account spending controls first. The command sends only the first synthetic dataset row, has eight total request attempts, six actions and 512 output tokens per request. These controls are not a monetary cap.
 
 ```sh

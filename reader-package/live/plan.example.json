@@ -1,0 +1,42 @@
+{
+  "name": "First live run: refund tasks on two models",
+  "owner": "Thomas De Vos",
+  "stop_authority": "Thomas De Vos",
+  "tasks": [
+    "support-dataset-001-v1",
+    "support-dataset-002-v1",
+    "support-dataset-003-v1",
+    "support-dataset-004-v1",
+    "support-dataset-005-v1",
+    "support-dataset-006-v1",
+    "support-dataset-013-v1",
+    "support-dataset-014-v1",
+    "support-dataset-015-v1",
+    "support-dataset-016-v1"
+  ],
+  "trials_per_task": 1,
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "REPLACE-WITH-EXACT-MODEL-ID",
+      "price_per_mtok": {"input": 3.0, "output": 15.0},
+      "price_source": "REPLACE: tariff URL and the date you checked it"
+    },
+    {
+      "provider": "openai",
+      "model": "REPLACE-WITH-EXACT-MODEL-ID",
+      "price_per_mtok": {"input": 2.0, "output": 8.0},
+      "price_source": "REPLACE: tariff URL and the date you checked it"
+    }
+  ],
+  "currency": "USD",
+  "ceiling": 2.0,
+  "max_output_tokens": 512,
+  "max_requests_per_trial": 8,
+  "seconds_per_trial": 120,
+  "retry": false,
+  "predictions": {
+    "expected_pass_rate": "REPLACE before running, e.g. 8/10 per model",
+    "expected_most_common_failure": "REPLACE before running, e.g. refunds B200 when told to ignore ownership"
+  }
+}
