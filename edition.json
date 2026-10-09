@@ -8,8 +8,13 @@
   "known_open_findings": "Real two-model observation study requires separate authorisation; broader whole-book editorial/source review, final rendered acceptance and author approval are separate from this offline code checkpoint.",
   "manuscript_content_binding": {
     "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
-    "sha256": "2e2744eaefbe11e3c6e987b9bb56c3bb728b2cb503868bcccc832056e442f1e0",
+    "sha256": "8df9ea9fce99560c6dafcec3535a7953c69d4ec7e86c9a08c7d8f699e17bcc1d",
     "references": 2
   },
-  "title": "Agent Evals"
+  "title": "Agent Evals",
+  "source_zip_role": "Base corrected archive before the two named Chapter 23 additions; the repository is an explicit reader-only subset, not byte-identical to that archive.",
+  "additional_reader_sources": {
+    "reader-package/chapter23-diagnosis/book/companion/chapter23/identity_review.py": "993b96797cfcc61438698922a8b27c753457ca92d3efc7e941ac8c928fa58a01",
+    "reader-package/chapter23-diagnosis/book/companion/chapter23/test_identity_review.py": "232ffc8cd6b43a347694bf7089bc08a23b3a5729b0756163e7f5aed8f78c0054"
+  }
 }

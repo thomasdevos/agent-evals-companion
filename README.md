@@ -96,7 +96,7 @@ No release tag or public release has been created. Later editorial candidates ma
 
 ## Identity-review transfer and rollout interlude
 
-Chapter 23 now includes a separate five-case synthetic identity/KYC review lab. It preserves source-document records, keeps verification unresolved and tests authorised index correction versus unsupported verification. It is not a model benchmark or compliance implementation. From `reader-package/`, use:
+Chapter 23 now includes a separate five-case synthetic identity/KYC review lab. It preserves source-document records, keeps verification unresolved and tests authorised index correction versus unsupported verification. It is not a model benchmark or compliance implementation. Read and record the chapter's prediction before opening the implementation or running the commands below. From `reader-package/`, use:
 
 ```sh
 python3 run.py 23 -- -m chapter23.identity_review observe
@@ -105,13 +105,13 @@ python3 run.py 23 -- -m chapter23.identity_review repair
 python3 run.py 23 -- -m unittest discover -s chapter23 -p 'test_identity_review.py' -v
 ```
 
-Read the chapter's prediction before the failure/repair output. `failure` deliberately exits 1; the other commands exit 0. Pass `-O` after `--` to optimise the child. The five-case queue remains separate from the original 100 authored review records.
+`failure` deliberately exits 1; the other commands exit 0. Pass `-O` after `--` to optimise the child. The five-case queue remains separate from the original 100 authored review records.
 
 The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on complete evidence"; the complete rollout lesson follows Chapter 22 as the unnumbered "Roll out and roll back" interlude. Its existing code remains under selector `19`; no package renumbering is required.
 
 ## Known limitations
 
-This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the exact source package. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. No live study or publication release is included.
+This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the base archive and the added identity-review files; reader-files.json binds the shipped payload. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. No live study or publication release is included.
 
 Nested READMEs describe their local implementation and may retain older chapter labels. Use the root map and current book for navigation. Author-only preparation/sealing utilities and their obsolete manifests are excluded. Figure generation and manuscript production are outside this code package.
 
