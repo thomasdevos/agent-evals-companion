@@ -1,10 +1,15 @@
 {
-  "edition": "2026-10-09-ch07-corrected-reader-derivative",
+  "edition": "2026-10-09-whole-book-integrated-reader-derivative",
   "repository": "https://github.com/thomasdevos/agent-evals-companion",
-  "source_zip_filename": "AI-Agent-Evals-ch07-corrected-companion-20261009.zip",
-  "source_zip_sha256": "afd63bb37999e15dd40e7ecba0eec13fc7aaf40c1b09f5144760325fdc478eb4",
-  "source_manuscript_sha256": "690f0b344f525e0b7319663065cae38373808a42f1d5e1bafcfdcae51c7e9c8e",
+  "source_zip_filename": "AI-Agent-Evals-ch08-corrected-companion-20261009.zip",
+  "source_zip_sha256": "a1670ba220a0d24c434bde4a10f610c9224dbf4709d550997cca069c0277fbb6",
   "status": "private development checkpoint; not a publication release",
   "license_status": "publication licensing decision pending",
-  "known_open_findings": "Chapter 8 trace validation, aggregation consistency, exercise disclosure and navigation; broader editorial review pending"
+  "known_open_findings": "Real two-model observation study requires separate authorisation; broader whole-book editorial/source review, final rendered acceptance and author approval are separate from this offline code checkpoint.",
+  "manuscript_content_binding": {
+    "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
+    "sha256": "2e2744eaefbe11e3c6e987b9bb56c3bb728b2cb503868bcccc832056e442f1e0",
+    "references": 2
+  },
+  "title": "Agent Evals"
 }

@@ -1,8 +1,8 @@
-# AI Agent Evals companion
+# Agent Evals companion
 
-Reader code for Thomas De Vos's *AI Agent Evals*: https://github.com/thomasdevos/agent-evals-companion
+Reader code for Thomas De Vos's *Agent Evals*: https://github.com/thomasdevos/agent-evals-companion
 
-This repository is private during development. Access requires an invitation and an authenticated GitHub account. A 404 while signed out does not mean the address is wrong. This is the 9 October 2026 Chapter 7 correction checkpoint, not a publication release or a claim that all chapters have passed editorial review. See [edition.json](edition.json) for the source identity and [known limitations](#known-limitations).
+This repository is private during development. Access requires an invitation and an authenticated GitHub account. A 404 while signed out does not mean the address is wrong. This is the 9 October 2026 integrated correction checkpoint, not a publication release or a claim that all chapters have passed editorial review. See [edition.json](edition.json) for the source identity and [known limitations](#known-limitations).
 
 ## Set up a working copy
 
@@ -94,9 +94,24 @@ No release tag or public release has been created. Later editorial candidates ma
 - Permission or output-directory error: work in a writable disposable clone. Some capture and verifier commands deliberately refuse an existing output path; choose a new path rather than overwriting evidence.
 - GitHub 404 or clone denied: sign in with the invited account, confirm access, then retry. Keep the repository private.
 
+## Identity-review transfer and rollout interlude
+
+Chapter 23 now includes a separate five-case synthetic identity/KYC review lab. It preserves source-document records, keeps verification unresolved and tests authorised index correction versus unsupported verification. It is not a model benchmark or compliance implementation. From `reader-package/`, use:
+
+```sh
+python3 run.py 23 -- -m chapter23.identity_review observe
+python3 run.py 23 -- -m chapter23.identity_review failure
+python3 run.py 23 -- -m chapter23.identity_review repair
+python3 run.py 23 -- -m unittest discover -s chapter23 -p 'test_identity_review.py' -v
+```
+
+Read the chapter's prediction before the failure/repair output. `failure` deliberately exits 1; the other commands exit 0. Pass `-O` after `--` to optimise the child. The five-case queue remains separate from the original 100 authored review records.
+
+The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on complete evidence"; the complete rollout lesson follows Chapter 22 as the unnumbered "Roll out and roll back" interlude. Its existing code remains under selector `19`; no package renumbering is required.
+
 ## Known limitations
 
-This checkpoint includes the independently reviewed Chapter 7 corrections and the native Chapter 6 integration. The current Chapter 8 review found retained-trace type validation and aggregation-consistency defects, plus exercise disclosure and navigation issues. Those corrections are pending; passing supplied tests does not close them. Later chapters, current provider compatibility, genuine model observations and whole-book acceptance are not certified by this repository creation.
+This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the exact source package. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. No live study or publication release is included.
 
 Nested READMEs describe their local implementation and may retain older chapter labels. Use the root map and current book for navigation. Author-only preparation/sealing utilities and their obsolete manifests are excluded. Figure generation and manuscript production are outside this code package.
 

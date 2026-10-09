@@ -23,6 +23,34 @@ def snapshot_shape(value):
     if len({r[0] for r in value['orders']}) != len(value['orders']):
         raise ValueError('duplicate order identity')
 
+def trace_shape(trace):
+    """Validate required retained event fields; recorder extension fields are allowed."""
+    fields = {
+        'ask': {'text': str}, 'read': {'text': str},
+        'refund': {'order_id': str, 'amount_pence': int},
+        'change_order': {'order_id': str, 'status': str},
+        'finish': {'status': str, 'reason': str, 'text': str},
+        'user_reply': {'order_id': str, 'text': str},
+    }
+    if type(trace) is not list:
+        raise ValueError('trace shape: list required')
+    for index, event in enumerate(trace):
+        if type(event) is not dict or type(event.get('kind')) is not str or event['kind'] not in fields:
+            raise ValueError(f'trace event {index}: unsupported kind')
+        kind = event['kind']
+        for name, scalar in fields[kind].items():
+            if type(event.get(name)) is not scalar:
+                raise ValueError(f'trace event {index}: {name} must be {scalar.__name__}')
+        if kind != 'user_reply' and ('known_order' not in event or
+                (event['known_order'] is not None and type(event['known_order']) is not str)):
+            raise ValueError(f'trace event {index}: known_order must be string or null')
+        if kind == 'refund' and not 0 < event['amount_pence'] <= 2**63 - 1:
+            raise ValueError(f'trace event {index}: amount_pence outside positive SQLite integer domain')
+        if kind in ('ask', 'finish') and not event['text'].strip():
+            raise ValueError(f'trace event {index}: visible text required')
+        if kind == 'finish' and event['status'] not in ('completed', 'refused'):
+            raise ValueError(f'trace event {index}: unsupported terminal status')
+
 def state_checks(trial, card):
     validate_card(card)
     terminal = trial.get('terminal')
@@ -32,9 +60,7 @@ def state_checks(trial, card):
         snapshot_shape(trial[field])
     if trial['before'] != card['start']:
         raise ValueError('unexpected starting state')
-    if type(trial['trace']) is not list or any(type(e) is not dict or e.get('kind') not in
-        ('ask','read','refund','change_order','finish','user_reply') for e in trial['trace']):
-        raise ValueError('trace shape')
+    trace_shape(trial['trace'])
     checks = repaired_grade(trial['before'], trial['after'], trial['trace'], trial['terminal'], card)
     checks['exact_refund_ledger'] = ledger_equal(trial['after']['refunds'], card['required_outcome']['refunds'])
     return checks
@@ -111,6 +137,14 @@ def aggregate(schedule, records):
             for e in r['prohibited_effects'].values():
                 if e['observed'] is not None and type(e['observed']) is not bool:
                     raise ValueError('effect observation')
+            if checks is not None:
+                for effect, predicate in EFFECTS.items():
+                    # Missing required refunds need not imply an extra refund.
+                    if effect == 'unrequested_refunds':
+                        continue
+                    observed = r['prohibited_effects'][effect]['observed']
+                    if observed is not None and observed == checks[predicate]:
+                        raise ValueError(f'status reconciliation: predicate/effect contradiction: {predicate}/{effect}')
             eligible = status in {'PASS','FAIL'}
             role = 'unavailable' if checks is None else 'scoring' if eligible else 'diagnostic'
             if r['scoring_eligible'] is not eligible or r['checks_role'] != role:
