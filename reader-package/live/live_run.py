@@ -48,9 +48,17 @@ class Budget:
         self.bound_exceeded = False
 
     def reserve(self, payload, max_out, price):
-        if self.bound_exceeded:
+        if self.bound_exceeded or self.unknown_requests:
             raise BudgetStop()
-        bound = Decimal(len(json.dumps(payload).encode())) * Decimal(str(price['input'])) / MTOK
+        size = len(json.dumps(payload).encode())
+        # Optional cache tariffs opt into a deliberately padded, short-context
+        # admission estimate. Bytes are not a provider billing guarantee.
+        if 'cache_write' in price:
+            if size > 24000:
+                raise BudgetStop()
+            size = size * 2 + 8192
+        tariff = max(Decimal(str(price[k])) for k in ('input', 'cached_input', 'cache_write') if k in price)
+        bound = Decimal(size) * tariff / MTOK
         bound += Decimal(max_out) * Decimal(str(price['output'])) / MTOK
         bound = bound.quantize(Decimal('0.000001'), rounding=ROUND_CEILING)
         if self.settled + self.held + bound > self.ceiling:
@@ -59,12 +67,12 @@ class Budget:
         return bound
 
     def settle(self, reservation, usage, price):
-        tokens = _tokens(usage)
+        tokens = _tokens(usage, price)
         if tokens is None:
             self.unknown_requests += 1
             return None  # reservation stays held
-        cost = (Decimal(tokens[0]) * Decimal(str(price['input'])) +
-                Decimal(tokens[1]) * Decimal(str(price['output']))) / MTOK
+        cost = sum(Decimal(n) * Decimal(str(price.get(k, 0))) for n, k in
+                   zip(tokens, ('input', 'output', 'cached_input', 'cache_write'))) / MTOK
         self.held -= reservation
         self.settled += cost
         if cost > reservation:
@@ -78,12 +86,22 @@ class Budget:
                     reservation_basis='serialized_request_bytes_estimate_not_provider_billing_guarantee')
 
 
-def _tokens(usage):
-    """Return (input, output) when usage is complete and uncached, else None."""
+def _tokens(usage, price=None):
+    """Disjoint ordinary input, total output, cache reads, cache writes.
+
+    Unknown categories or inconsistent subset totals must never silently settle.
+    Output reasoning is a subset, not an additional charge.
+    """
     if not isinstance(usage, dict):
         return None
     i, o = usage.get('input_tokens'), usage.get('output_tokens')
     if type(i) is not int or type(o) is not int or i < 0 or o < 0:
+        return None
+    allowed = {'input_tokens', 'output_tokens', 'total_tokens', 'input_tokens_details',
+               'output_tokens_details', 'cache_creation_input_tokens', 'cache_read_input_tokens'}
+    if set(usage) - allowed:
+        return None
+    if 'total_tokens' in usage and (type(usage['total_tokens']) is not int or usage['total_tokens'] != i + o):
         return None
     for key in ('cache_creation_input_tokens', 'cache_read_input_tokens'):
         value = usage.get(key, 0)
@@ -92,10 +110,20 @@ def _tokens(usage):
     details = usage.get('input_tokens_details', {})
     if type(details) is not dict:
         return None
-    cached = details.get('cached_tokens', 0)
-    if type(cached) is not int or cached != 0:
-        return None  # cache categories are priced differently; do not guess
-    return i, o
+    if set(details) - {'cached_tokens', 'cache_write_tokens'}:
+        return None
+    cached, written = details.get('cached_tokens', 0), details.get('cache_write_tokens', 0)
+    if any(type(v) is not int or v < 0 for v in (cached, written)) or cached + written > i:
+        return None
+    if (cached and (price is None or 'cached_input' not in price)) or (written and (price is None or 'cache_write' not in price)):
+        return None
+    output = usage.get('output_tokens_details', {})
+    if type(output) is not dict or set(output) - {'reasoning_tokens'}:
+        return None
+    reasoning = output.get('reasoning_tokens', 0)
+    if type(reasoning) is not int or not 0 <= reasoning <= o:
+        return None
+    return i - cached - written, o, cached, written
 
 
 class Capture:
@@ -219,7 +247,7 @@ def validate_plan(plan):
             raise SystemExit('Duplicate provider/model entry.')
         identities.add(identity)
         price = m['price_per_mtok']
-        if type(price) is not dict or set(price) != {'input', 'output'} or not all(positive(v) for v in price.values()):
+        if type(price) is not dict or set(price) not in ({'input', 'output'}, {'input', 'output', 'cached_input', 'cache_write'}) or not all(positive(v) for v in price.values()):
             raise SystemExit('Prices must be finite positive numbers from a dated USD tariff, not booleans.')
 
 

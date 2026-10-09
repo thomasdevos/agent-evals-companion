@@ -2,7 +2,7 @@
 
 This separate full-run command uses the Chapter 2 executor and grader unchanged. Anthropic Messages is implemented here; OpenAI uses Chapter 5's `ProviderAgent`, with the transport enforcing the plan's output cap. `run.py` remains the offline launcher. The legacy Chapter 5 command can also send requests (one task, OpenAI only, no spending ceiling); this kit is the sole **recommended full-run path**, not the only network-capable code in the repository.
 
-Python 3.11 and its standard library suffice. No SDK installation is required. The shipped tests and rehearsals use authored fakes, not recordings or live-model observations. Current API compatibility has not been verified by a live run.
+Python 3.11 and its standard library suffice. No SDK installation is required. The shipped tests and rehearsals use authored fakes, not recordings or live-model observations. The book records a bounded genuine gpt-6-astra run on 9 October 2026. That observation is separate from these offline fixtures; raw captures remain private.
 
 ## Prepare and rehearse
 
@@ -15,7 +15,7 @@ From `reader-package/`:
    ```sh
    python3 live/live_run.py --plan live/plan-local.json --out live/results/rehearsal --dry-run
    python3 live/live_run.py --plan live/plan-local.json --out live/results/fenced --dry-run --dry-fault fenced
-   python3 -m unittest -v live.test_live_run live.test_safety
+   python3 -m unittest -v live.test_live_run live.test_safety live.test_astra_accounting
    python3 ../tools/check_offline.py
    ```
 
@@ -34,14 +34,14 @@ Do not run live as part of installation, CI or offline checking. After reviewing
 python3 live/live_run.py --plan live/plan-local.json --out live/results/run-1 --authorise-live
 ```
 
-No live experiment was performed for this checkpoint. Keep every run, including failures. Choose a new folder after a fix; existing output directories are refused, not resumed or overwritten. Read `summary.md`, `report.json`, the frozen `plan.json` and full `capture.jsonl` before drawing conclusions. Reports include all scheduled slots, including explicit `MISSING` records after a run stop. `requests` counts dispatched transport calls, not rejected reservation attempts. Exit 0 means reporting completed, not that all trials passed or that billing is known; inspect the report statuses and budget.
+Keep every run, including failures. Choose a new folder after a fix; existing output directories are refused, not resumed or overwritten. Read `summary.md`, `report.json`, the frozen `plan.json` and full `capture.jsonl` before drawing conclusions. Reports include all scheduled slots, including explicit `MISSING` records after a run stop. `requests` counts dispatched transport calls, not rejected reservation attempts. Exit 0 means reporting completed, not that all trials passed or that billing is known; inspect the report statuses and budget.
 
 ## Budget: conditional local admission, not a billing guarantee
 
-Before dispatch, the meter reserves serialized JSON byte length at the plan's input tariff plus the enforced output-token cap at its output tariff. Admission refuses when settled cost plus holds plus the new estimate would exceed the plan ceiling. **JSON byte length is not a proven upper bound on provider-billed tokens:** hidden framing, provider changes, caching, tariff errors, reasoning or other billable categories may invalidate it. Use provider-side limits where available and independently reconcile the provider invoice; this kit cannot guarantee a hard dollar cap. There is no assertion that $2 is sufficient.
+Before dispatch, legacy input/output plans reserve serialized JSON byte length at the input tariff plus the output cap. Optional paired `cached_input` and `cache_write` tariffs use the maximum input-category tariff, twice serialized bytes plus 8192 overhead tokens, and the output cap; requests above 24000 serialized bytes are refused. See [ASTRA-ACCOUNTING.md](ASTRA-ACCOUNTING.md) for category semantics and rates. Admission refuses when settled cost plus holds plus the new estimate would exceed the plan ceiling. **JSON byte length is not a proven upper bound on provider-billed tokens:** hidden framing, provider changes, caching, tariff errors, reasoning or other billable categories may invalidate it. Use provider-side limits where available and independently reconcile the provider invoice; this kit cannot guarantee a hard dollar cap. There is no assertion that $2 is sufficient.
 
-- Complete nonnegative integer, uncached usage settles at the supplied tariffs. This is a local accounting calculation, not an invoice.
-- Missing/malformed/negative usage, Anthropic cache usage and OpenAI cached-input details keep the hold and stop the entire run with unknown total; remaining slots are missing.
+- Complete nonnegative integer usage settles at supplied category tariffs. OpenAI ordinary input, cache reads and cache writes are disjoint; reasoning is included in output, never charged twice. This is a local accounting calculation, not an invoice.
+- Missing/malformed/negative usage, Anthropic cache usage, unsupported categories and OpenAI cache categories without their paired tariffs keep the hold and stop the entire run with unknown total; remaining slots are missing.
 - Transport errors retain the hold, mark total unknown and stop globally. They are not automatically retried even if `retry` is true: the provider may already have billed the failed attempt.
 - Usage costing more than its reservation is recorded honestly, even above the ceiling; the run stops before any further request. It cannot undo money already spent.
 - Capture write/fsync failure stops dispatch. Intent is written and fsynced before a request; response follows it. A failed response capture may follow an already-billed request, so retain partial evidence and reconcile externally.

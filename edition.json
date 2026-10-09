@@ -5,22 +5,23 @@
   "source_zip_sha256": "a1670ba220a0d24c434bde4a10f610c9224dbf4709d550997cca069c0277fbb6",
   "status": "private development checkpoint; not a publication release",
   "license_status": "publication licensing decision pending",
-  "known_open_findings": "Genuine two-model observation study and empirical results need separate authorisation; author, access/licensing and publication decisions remain separate. Offline tests do not supply live results.",
+  "known_open_findings": "Controlled two-model comparison, author approval, access/licensing and publication remain separate. Native pixel QA for this newly paginated edition is pending.",
   "manuscript_content_binding": {
     "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
-    "sha256": "1bb3a4afe7f344343d2ae3f9e10d2ec5f5bed439bec38de176ff1405d43dafe4",
+    "sha256": "bfce157879b476dede7de0947a62db5f731cc070e8014f0108862d0b1301da1e",
     "references": 2
   },
   "title": "AI Agent Evals",
-  "live_kit_status": "Supplied kit integrated with offline safety corrections; no live models executed; byte-based reservation is conditional, not a provider billing guarantee.",
+  "live_kit_status": "Category-aware accounting corrected before genuine gpt-6-astra observation: 3 PASS, 7 FAIL, 30 HTTP 200 requests. The book records the results; raw captures are excluded. Reservation is conditional, not a provider billing guarantee.",
   "live_kit_source_zip_sha256": "ca138ef6ae49652bc69e8a40964d7c32e747ce3afaa0e4c4ef6876d899937d7b",
   "offline_verification": {
-    "python": "3.11.15",
     "commands": 34,
-    "test_invocations": 834,
-    "live_kit_tests": 26,
+    "test_invocations": 845,
+    "failed": [],
     "evidence": "AUTHORED_OFFLINE_FIXTURES",
-    "hosted_ci": false
+    "hosted_ci": false,
+    "python": "3.9.6",
+    "live_kit_tests": 37
   },
   "manuscript_binding_role": "Current corrected manuscript content; exactly two immutable commit pins normalised to avoid a circular hash.",
   "source_zip_role": "Base corrected archive before the two named Chapter 23 additions; the repository is an explicit reader-only subset, not byte-identical to that archive.",
@@ -30,16 +31,14 @@
   },
   "previous_manuscript_content_binding": {
     "method": "UTF-8 manuscript with exactly two edition commit references replaced by <COMPANION_COMMIT>; SHA256",
-    "sha256": "38d259799cc0e6259fb754f39b6751ee7661b600a7886e167f36b76fc6706ad5",
+    "sha256": "8ad36f1c6234207e1b727c8fe178305fbfced6b21bd57aecbbe5705a2ba7334c",
     "references": 2
   },
-  "offline_verification_role": "Retained consolidated checkpoint evidence; not a fresh whole-book rerun after the narrow adapter correction.",
+  "offline_verification_role": "Fresh consolidated offline execution after category-aware accounting integration.",
   "offline_delta_verification": {
-    "scope": "Static UTF-8 refund binding admission before any response-batch effect",
-    "python": "3.11.15",
-    "normal_tests": 30,
-    "optimized_tests": 30,
-    "evidence": "AUTHORED_OFFLINE_FIXTURES",
-    "independent_acceptance": "recorded separately in book QA; not implied by producer tests"
+    "scope": "Cache categories, reasoning subset, conditional reservation and global unknown-usage stop",
+    "normal_tests": 37,
+    "optimized_tests": 37,
+    "evidence": "AUTHORED_OFFLINE_FIXTURES"
   }
 }

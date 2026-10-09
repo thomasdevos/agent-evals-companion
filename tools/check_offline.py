@@ -32,7 +32,7 @@ def cases():
         ('native-demo', ['6-native', '--', '-B', 'task_demo.py'], 0),
         ('delivery-integration', ['rollout', '--', '-m', 'unittest', '-v', 'test_integration'], 0),
         ('delivery-demo', ['rollout', '--', 'integration.py'], 0),
-        ('live-kit', ['-m', 'unittest', '-v', 'live.test_live_run', 'live.test_safety'], 0),
+        ('live-kit', ['-m', 'unittest', '-v', 'live.test_live_run', 'live.test_safety', 'live.test_astra_accounting'], 0),
     ])
     for agent, expected in [('corrected', 0), ('baseline', 1), ('duplicate', 1), ('crash', 2)]:
         result.append((agent, ['1', '--', 'first_eval.py', '--agent', agent], expected))

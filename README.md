@@ -68,7 +68,7 @@ From the repository root:
 python3 tools/check_offline.py
 ```
 
-This runs each current chapter's named suite, Appendix E, the native Chapter 6 suite, the live kit's offline fake-provider and safety suites, and first-lab positive/negative controls. It verifies expected exit statuses and reports observed test invocations rather than a fixed historical count. It is a local regression check, not independent editorial acceptance or a benchmark of a model. It writes only the labs' temporary/generated outputs. Run it in a disposable clone if you want to preserve your own experiment outputs.
+This runs each current chapter's named suite, Appendix E, the native Chapter 6 suite, the live kit's offline fake-provider, safety and cache-accounting suites, and first-lab positive/negative controls. It verifies expected exit statuses and reports observed test invocations rather than a fixed historical count. It is a local regression check, not independent editorial acceptance or a benchmark of a model. It writes only the labs' temporary/generated outputs. Run it in a disposable clone if you want to preserve your own experiment outputs.
 
 No GitHub Actions workflow is installed. The inherited `ci-example.yaml` files are inert teaching examples, reviewed as examples but not enabled as hosted workflows. They do not deploy, spend money or provide evidence that hosted CI passed.
 
@@ -76,7 +76,7 @@ No GitHub Actions workflow is installed. The inherited `ci-example.yaml` files a
 
 ### Run against real models
 
-Use [reader-package/live/README.md](reader-package/live/README.md) for the sole recommended full-run path: `live/live_run.py`, separate from the offline launcher. It sends requests only with `--authorise-live`; `--dry-run` uses authored fakes and omitting both flags is plan-only. The legacy Chapter 5 entry point also can send requests (one task, OpenAI only, no spending ceiling); it is not the recommended full-run command. This checkpoint includes no live run or provider-compatibility evidence. Read the kit's conditional budget and capture-privacy limitations before approving any spend.
+Use [reader-package/live/README.md](reader-package/live/README.md) for the sole recommended full-run path: `live/live_run.py`, separate from the offline launcher. It sends requests only with `--authorise-live`; `--dry-run` uses authored fakes and omitting both flags is plan-only. The legacy Chapter 5 entry point also can send requests (one task, OpenAI only, no spending ceiling); it is not the recommended full-run command. The matching book records a bounded genuine gpt-6-astra run; raw captures are deliberately excluded from this code repository. Read the kit's conditional budget and capture-privacy limitations before approving any spend.
 
 The supplied observations and provider envelopes are authored fixtures. Local SQLite writes, grading, capture and replay are real local execution; their results say nothing about a live model's quality or current provider compatibility. The launcher rejects explicit live-provider arguments, but it is not a security sandbox and can execute arbitrary Python. The underlying Chapter 5 code retains a live interface for a separately approved experiment. Do not bypass the launcher or add credentials as a setup step. Live use requires a reviewed command, current SDK/API checks, privacy controls and explicit spending approval.
 
@@ -115,7 +115,7 @@ The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on
 
 ## Known limitations
 
-This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the base archive and the added identity-review files; reader-files.json binds the shipped payload. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. No live study or publication release is included.
+This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the base archive and the added identity-review files; reader-files.json binds the shipped payload. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. The book separately records the genuine Astra observation; no raw live captures or publication release are included.
 
 Nested READMEs describe their local implementation and may retain older chapter labels. Use the root map and current book for navigation. Author-only preparation/sealing utilities and their obsolete manifests are excluded. Figure generation and manuscript production are outside this code package.
 
