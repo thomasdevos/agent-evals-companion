@@ -22,8 +22,8 @@ Run commands from `reader-package/`. The paths below are relative to that direct
 | `16` | `runtime16` |
 | `17` | `core/companion` |
 | `18` | `core/companion` |
-| `19` | `delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader` |
-| `rollout` | `delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader` (alias of `19`) |
+| `19` | `chapter19/reader` |
+| `rollout` | `chapter19/reader` (alias of `19`) |
 | `20` | `runtime20` |
 | `21` | `core/companion` |
 | `22` | `runtime22` |

@@ -117,7 +117,7 @@ The manuscript retains 24 numbered chapters. Chapter 19 is now "Gate releases on
 
 This checkpoint retains the independently reviewed Chapter 7 corrections and native Chapter 6 integration, and adds the Chapter 8 retained-trace validation, aggregation-consistency and reader-instruction corrections. The edition record identifies the base archive and the added identity-review files; reader-files.json binds the shipped payload. These offline corrections do not establish current provider compatibility, genuine model observations or whole-book editorial acceptance. The Chapter 23 synthetic identity-review transfer is also included. The book separately records the genuine Astra observation; no raw live captures or publication release are included.
 
-Nested READMEs describe their local implementation and may retain older chapter labels. Use the root map and current book for navigation. Author-only preparation/sealing utilities and their obsolete manifests are excluded. Figure generation and manuscript production are outside this code package.
+Nested READMEs describe their local implementation and may retain older chapter labels. Use the root map and current book for navigation. Author-only preparation/sealing utilities and their obsolete manifests are excluded. Manuscript production is outside this code package. Chapters 16, 22 and 24 include offline figure commands.
 
 ## Rights and publication
 

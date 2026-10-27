@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="28" font-family="sans-serif" font-size="18" fill="#111111">Figure 24.1. Suite cost frontier</text>
+<text x="24" y="50" font-family="sans-serif" font-size="12" fill="#333333">Hypothetical cents versus cases retained. The eligible frequent suite is built first.</text>
+<text x="24" y="70" font-family="sans-serif" font-size="12" fill="#333333">Direct, frequent suite: 565 cents. Direct, full suite: 1808 cents, 0 passes, 16 requests.</text>
+<text x="24" y="88" font-family="sans-serif" font-size="12" fill="#333333">Bounded retry, frequent suite: 85 cents. Bounded retry, full suite: 272 cents, 16 passes, 48 requests.</text>
+<text x="24" y="108" font-family="sans-serif" font-size="12" fill="#333333">Direct sends fewer requests. Its total is higher because unsuccessful trials add investigation cents.</text>
+<line x1="72" y1="132" x2="72" y2="456" stroke="#222222"/>
+<line x1="72" y1="456" x2="732" y2="456" stroke="#222222"/>
+<text transform="rotate(-90 18 300)" x="18" y="300" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#111111">hypothetical cents</text>
+<text x="402" y="502" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#111111">cases retained, frequent suite first</text>
+<text x="64" y="460" text-anchor="end" font-family="sans-serif" font-size="11" fill="#111111">0</text>
+<text x="64" y="136" text-anchor="end" font-family="sans-serif" font-size="11" fill="#111111">1808</text>
+<line x1="248.00" y1="132" x2="248.00" y2="456" stroke="#888888" stroke-dasharray="3 3"/>
+<text x="252.00" y="146" font-family="sans-serif" font-size="11" fill="#333333">eligible frequent suite</text>
+<polyline fill="none" stroke="#111111" stroke-width="1.8" points="72.00,437.25 116.00,418.50 160.00,399.75 204.00,381.00 248.00,362.25 292.00,343.50 336.00,324.75 380.00,306.00 424.00,287.25 468.00,268.50 512.00,249.75 556.00,231.00 600.00,212.25 644.00,193.50 688.00,174.75 732.00,156.00"/>
+<circle cx="248.00" cy="362.25" r="3.5" fill="#111111" data-policy="direct" data-suite="frequent" data-cases="5" data-cents="565"/>
+<circle cx="732.00" cy="156.00" r="3.5" fill="#111111" data-policy="direct" data-suite="full" data-cases="16" data-cents="1808"/>
+<polyline fill="none" stroke="#555555" stroke-width="1.8" stroke-dasharray="6 3" points="72.00,453.18 116.00,450.03 160.00,447.21 204.00,444.38 248.00,441.90 292.00,439.08 336.00,436.25 380.00,433.43 424.00,430.61 468.00,427.79 512.00,424.97 556.00,422.15 600.00,419.33 644.00,416.51 688.00,413.69 732.00,410.87"/>
+<circle cx="248.00" cy="441.90" r="3.5" fill="#555555" data-policy="bounded-retry" data-suite="frequent" data-cases="5" data-cents="85"/>
+<circle cx="732.00" cy="410.87" r="3.5" fill="#555555" data-policy="bounded-retry" data-suite="full" data-cases="16" data-cents="272"/>
+<text x="560" y="28" font-family="sans-serif" font-size="12" fill="#111111">direct</text>
+<line x1="528" y1="24" x2="554" y2="24" stroke="#111111" stroke-width="1.8"/>
+<text x="560" y="46" font-family="sans-serif" font-size="12" fill="#555555">bounded retry</text>
+<line x1="528" y1="42" x2="554" y2="42" stroke="#555555" stroke-width="1.8" stroke-dasharray="6 3"/>
+</svg>

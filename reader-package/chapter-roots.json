@@ -17,7 +17,7 @@
   "16": "runtime16",
   "17": "core/companion",
   "18": "core/companion",
-  "19": "delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader",
+  "19": "chapter19/reader",
   "20": "runtime20",
   "21": "core/companion",
   "22": "runtime22",
@@ -25,5 +25,5 @@
   "24": "core/companion",
   "E": "statistics",
   "6-native": "native-chapter06",
-  "rollout": "delivery/revisions/revision-pack-20261006/completion-delivery-selected/reader"
+  "rollout": "chapter19/reader"
 }

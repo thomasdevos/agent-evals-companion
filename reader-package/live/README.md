@@ -1,4 +1,4 @@
-# AI Agent Evals — live run kit
+# AI Agent Evals: live run kit
 
 This separate full-run command uses the Chapter 2 executor and grader unchanged. Anthropic Messages is implemented here; OpenAI uses Chapter 5's `ProviderAgent`, with the transport enforcing the plan's output cap. `run.py` remains the offline launcher. The legacy Chapter 5 command can also send requests (one task, OpenAI only, no spending ceiling); this kit is the sole **recommended full-run path**, not the only network-capable code in the repository.
 
@@ -9,7 +9,7 @@ Python 3.11 and its standard library suffice. No SDK installation is required. T
 From `reader-package/`:
 
 1. Copy `live/plan.example.json` to `live/plan-local.json`. Keep the ten task IDs. Fill in exact model identifiers, current USD input/output tariffs, the tariff URL **and date checked**, ceiling, owner and stop authority. Write both predictions before running. Example prices are illustrative, not verified current prices. The validator checks shape, finite positive values and common placeholders; it cannot verify tariff freshness, model immutability or the sincerity of a prediction. Free/zero tariffs and non-USD conversions are not implemented.
-2. For rehearsal only, use clearly labelled fake model names, a source such as `OFFLINE FAKE tariff — not for live use`, and nonempty predictions (for example `Fake corrected script: 10/10 per model` and `Fenced final JSON should fail the Anthropic parser`). These labels do not make a plan safe for live dispatch: never pass a fake plan with `--authorise-live`.
+2. For rehearsal only, use clearly labelled fake model names, a source such as `OFFLINE FAKE tariff: not for live use`, and nonempty predictions (for example `Fake corrected script: 10/10 per model` and `Fenced final JSON should fail the Anthropic parser`). These labels do not make a plan safe for live dispatch: never pass a fake plan with `--authorise-live`.
 3. Rehearse without keys or network:
 
    ```sh

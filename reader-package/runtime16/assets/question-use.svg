@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="372" viewBox="0 0 720 372">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="28" font-family="sans-serif" font-size="18" fill="#111111">Questions and useful replies</text>
+<text x="24" y="48" font-family="sans-serif" font-size="12" fill="#333333">Gray bars are questions. Black bars are useful replies.</text>
+<text x="16" y="72" font-family="sans-serif" font-size="12" fill="#111111">cooperative / vague</text>
+<rect x="180" y="60" width="76.67" height="16" fill="#bdbdbd"/>
+<rect x="180" y="60" width="76.67" height="16" fill="#222222"/>
+<text x="16" y="100" font-family="sans-serif" font-size="12" fill="#111111">cooperative / specific</text>
+<rect x="180" y="88" width="76.67" height="16" fill="#bdbdbd"/>
+<rect x="180" y="88" width="76.67" height="16" fill="#222222"/>
+<text x="16" y="128" font-family="sans-serif" font-size="12" fill="#111111">literal / vague</text>
+<rect x="180" y="116" width="460.00" height="16" fill="#bdbdbd"/>
+<rect x="180" y="116" width="0.00" height="16" fill="#222222"/>
+<text x="16" y="156" font-family="sans-serif" font-size="12" fill="#111111">literal / specific</text>
+<rect x="180" y="144" width="76.67" height="16" fill="#bdbdbd"/>
+<rect x="180" y="144" width="76.67" height="16" fill="#222222"/>
+<text x="16" y="184" font-family="sans-serif" font-size="12" fill="#111111">noisy / vague</text>
+<rect x="180" y="172" width="460.00" height="16" fill="#bdbdbd"/>
+<rect x="180" y="172" width="0.00" height="16" fill="#222222"/>
+<text x="16" y="212" font-family="sans-serif" font-size="12" fill="#111111">noisy / specific</text>
+<rect x="180" y="200" width="153.33" height="16" fill="#bdbdbd"/>
+<rect x="180" y="200" width="76.67" height="16" fill="#222222"/>
+<text x="16" y="240" font-family="sans-serif" font-size="12" fill="#111111">abandon / vague</text>
+<rect x="180" y="228" width="76.67" height="16" fill="#bdbdbd"/>
+<rect x="180" y="228" width="0.00" height="16" fill="#222222"/>
+<text x="16" y="268" font-family="sans-serif" font-size="12" fill="#111111">abandon / specific</text>
+<rect x="180" y="256" width="76.67" height="16" fill="#bdbdbd"/>
+<rect x="180" y="256" width="0.00" height="16" fill="#222222"/>
+<text x="16" y="296" font-family="sans-serif" font-size="12" fill="#111111">drift / vague</text>
+<rect x="180" y="284" width="460.00" height="16" fill="#bdbdbd"/>
+<rect x="180" y="284" width="0.00" height="16" fill="#222222"/>
+<text x="16" y="324" font-family="sans-serif" font-size="12" fill="#111111">drift / specific</text>
+<rect x="180" y="312" width="460.00" height="16" fill="#bdbdbd"/>
+<rect x="180" y="312" width="0.00" height="16" fill="#222222"/>
+</svg>
