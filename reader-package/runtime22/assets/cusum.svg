@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="64" y="28" font-family="sans-serif" font-size="18" fill="#111111">CUSUM</text>
+<text transform="rotate(-90 18 250)" x="18" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#111111">CUSUM</text>
+<text x="64" y="444" font-family="sans-serif" font-size="12" fill="#333333">Missing days hold the CUSUM state. The line shows the chapter cusum field. Threshold h = 5.</text>
+<line x1="72" y1="58" x2="72" y2="388" stroke="#222222"/>
+<line x1="72" y1="388" x2="736" y2="388" stroke="#222222"/>
+<text x="64" y="392.00" text-anchor="end" font-family="sans-serif" font-size="11" fill="#111111">0</text>
+<text x="64" y="62" text-anchor="end" font-family="sans-serif" font-size="11" fill="#111111">9.3959</text>
+<text x="72.00" y="406" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#111111">20</text>
+<text x="297.08" y="406" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#111111">40</text>
+<text x="522.17" y="406" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#111111">60</text>
+<text x="736.00" y="406" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#111111">79</text>
+<text x="404.0" y="424" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#111111">day</text>
+<line x1="72" y1="212.39" x2="736" y2="212.39" stroke="#666666" stroke-dasharray="4 3"/>
+<text x="78" y="208.39" font-family="sans-serif" font-size="11" fill="#333333">threshold 5</text>
+<polyline fill="none" stroke="#555555" stroke-width="1.6" stroke-dasharray="5 3" points="72.00,388.00 83.25,388.00 94.51,387.38 105.76,388.00 117.02,388.00 128.27,388.00 139.53,388.00 150.78,388.00 162.03,335.42 173.29,388.00 184.54,388.00 195.80,388.00 207.05,387.38 218.31,388.00 229.56,387.38 240.81,386.75 252.07,388.00 263.32,388.00 274.58,388.00 285.83,388.00 297.08,361.40 308.34,386.75 319.59,388.00 330.85,388.00 342.10,348.41 353.36,388.00 364.61,388.00 375.86,388.00 387.12,387.38 398.37,386.75 409.63,388.00 420.88,388.00 432.14,388.00 443.39,388.00 454.64,387.38 465.90,388.00 477.15,361.40 488.41,388.00 499.66,388.00 510.92,388.00 522.17,388.00 533.42,348.41 544.68,388.00 555.93,388.00 567.19,388.00 578.44,388.00 589.69,388.00 600.95,388.00 612.20,387.38 623.46,388.00 634.71,387.38 645.97,388.00 657.22,388.00 668.47,388.00 679.73,388.00 690.98,388.00 702.24,388.00 713.49,388.00 724.75,387.38 736.00,373.76"/>
+<circle cx="72.00" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="20" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="83.25" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="21" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="94.51" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="22" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="105.76" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="23" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="117.02" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="24" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="128.27" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="25" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="139.53" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="26" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="150.78" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="27" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="162.03" cy="335.42" r="2.4" fill="#555555" data-series="null" data-day="28" data-raw="1.4971" data-z="1.4971"/>
+<circle cx="173.29" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="29" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="184.54" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="30" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="195.80" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="31" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="207.05" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="32" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="218.31" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="33" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="229.56" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="34" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="240.81" cy="386.75" r="2.4" fill="#555555" data-series="null" data-day="35" data-raw="0.0355" data-z="0.0355"/>
+<circle cx="252.07" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="36" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="263.32" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="37" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="274.58" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="38" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="285.83" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="39" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="297.08" cy="361.40" r="2.4" fill="#555555" data-series="null" data-day="40" data-raw="0.7574" data-z="0.7574"/>
+<circle cx="308.34" cy="386.75" r="2.4" fill="#555555" data-series="null" data-day="41" data-raw="0.0355" data-z="0.0355"/>
+<circle cx="319.59" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="42" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="330.85" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="43" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="342.10" cy="348.41" r="2.4" fill="#555555" data-series="null" data-day="44" data-raw="1.1273" data-z="1.1273"/>
+<circle cx="353.36" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="45" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="364.61" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="46" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="375.86" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="47" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="387.12" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="48" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="398.37" cy="386.75" r="2.4" fill="#555555" data-series="null" data-day="49" data-raw="0.0355" data-z="0.0355"/>
+<circle cx="409.63" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="50" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="420.88" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="51" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="432.14" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="52" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="443.39" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="53" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="454.64" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="54" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="465.90" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="55" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="477.15" cy="361.40" r="2.4" fill="#555555" data-series="null" data-day="56" data-raw="0.7574" data-z="0.7574"/>
+<circle cx="488.41" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="57" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="499.66" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="58" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="510.92" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="59" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="522.17" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="60" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="533.42" cy="348.41" r="2.4" fill="#555555" data-series="null" data-day="61" data-raw="1.1273" data-z="1.1273"/>
+<circle cx="544.68" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="62" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="555.93" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="63" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="567.19" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="64" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="578.44" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="65" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="589.69" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="66" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="600.95" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="67" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="612.20" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="68" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="623.46" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="69" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="634.71" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="70" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="645.97" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="71" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="657.22" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="72" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="668.47" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="73" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="679.73" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="74" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="690.98" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="75" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="702.24" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="76" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="713.49" cy="388.00" r="2.4" fill="#555555" data-series="null" data-day="77" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="724.75" cy="387.38" r="2.4" fill="#555555" data-series="null" data-day="78" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="736.00" cy="373.76" r="2.4" fill="#555555" data-series="null" data-day="79" data-raw="0.4054" data-z="0.4054"/>
+<polyline fill="none" stroke="#111111" stroke-width="1.6" points="72.00,388.00 83.25,388.00 94.51,387.38 105.76,388.00 117.02,388.00 128.27,388.00 139.53,388.00 150.78,388.00 162.03,335.42 173.29,388.00 184.54,388.00 195.80,388.00 207.05,387.38 218.31,388.00 229.56,387.38 240.81,386.75 252.07,388.00 263.32,388.00 274.58,388.00 285.83,388.00 297.08,283.46 308.34,178.92 319.59,335.42 330.85,165.94 342.10,192.54 353.36,231.51 364.61,100.99 375.86,309.44 387.12,152.95 398.37,283.46 409.63,217.89 420.88,126.34 432.14,179.55 443.39,283.46 454.64,113.98 465.90,388.00 477.15,388.00 488.41,388.00 499.66,257.48 510.92,88.00 522.17,309.44 533.42,139.96 544.68,244.49 555.93,204.90 567.19,296.45 578.44,204.90 589.69,283.46 600.95,152.95 612.20,296.45 623.46,139.96 634.71,205.53 645.97,270.47 657.22,152.95 668.47,270.47 679.73,204.90 690.98,309.44 702.24,230.88 713.49,139.33 724.75,244.49 736.00,100.99"/>
+<circle cx="72.00" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="20" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="83.25" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="21" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="94.51" cy="387.38" r="2.4" fill="#111111" data-series="injected" data-day="22" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="105.76" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="23" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="117.02" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="24" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="128.27" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="25" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="139.53" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="26" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="150.78" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="27" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="162.03" cy="335.42" r="2.4" fill="#111111" data-series="injected" data-day="28" data-raw="1.4971" data-z="1.4971"/>
+<circle cx="173.29" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="29" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="184.54" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="30" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="195.80" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="31" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="207.05" cy="387.38" r="2.4" fill="#111111" data-series="injected" data-day="32" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="218.31" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="33" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="229.56" cy="387.38" r="2.4" fill="#111111" data-series="injected" data-day="34" data-raw="0.0178" data-z="0.0178"/>
+<circle cx="240.81" cy="386.75" r="2.4" fill="#111111" data-series="injected" data-day="35" data-raw="0.0355" data-z="0.0355"/>
+<circle cx="252.07" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="36" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="263.32" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="37" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="274.58" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="38" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="285.83" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="39" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="297.08" cy="283.46" r="2.4" fill="#111111" data-series="injected" data-day="40" data-raw="2.9764" data-z="2.9764"/>
+<circle cx="308.34" cy="178.92" r="2.4" fill="#111111" data-series="injected" data-day="41" data-raw="5.9529" data-z="5.9529"/>
+<circle cx="319.59" cy="335.42" r="2.4" fill="#111111" data-series="injected" data-day="42" data-raw="1.4971" data-z="1.4971"/>
+<circle cx="330.85" cy="165.94" r="2.4" fill="#111111" data-series="injected" data-day="43" data-raw="6.3227" data-z="6.3227"/>
+<circle cx="342.10" cy="192.54" r="2.4" fill="#111111" data-series="injected" data-day="44" data-raw="5.5653" data-z="5.5653"/>
+<circle cx="353.36" cy="231.51" r="2.4" fill="#111111" data-series="injected" data-day="45" data-raw="4.4558" data-z="4.4558"/>
+<circle cx="364.61" cy="100.99" r="2.4" fill="#111111" data-series="injected" data-day="46" data-raw="8.1719" data-z="8.1719"/>
+<circle cx="375.86" cy="309.44" r="2.4" fill="#111111" data-series="injected" data-day="47" data-raw="2.2368" data-z="2.2368"/>
+<circle cx="387.12" cy="152.95" r="2.4" fill="#111111" data-series="injected" data-day="48" data-raw="6.6925" data-z="6.6925"/>
+<circle cx="398.37" cy="283.46" r="2.4" fill="#111111" data-series="injected" data-day="49" data-raw="2.9764" data-z="2.9764"/>
+<circle cx="409.63" cy="217.89" r="2.4" fill="#111111" data-series="injected" data-day="50" data-raw="4.8434" data-z="4.8434"/>
+<circle cx="420.88" cy="126.34" r="2.4" fill="#111111" data-series="injected" data-day="51" data-raw="7.4500" data-z="7.4500"/>
+<circle cx="432.14" cy="179.55" r="2.4" fill="#111111" data-series="injected" data-day="52" data-raw="5.9351" data-z="5.9351"/>
+<circle cx="443.39" cy="283.46" r="2.4" fill="#111111" data-series="injected" data-day="53" data-raw="2.9764" data-z="2.9764"/>
+<circle cx="454.64" cy="113.98" r="2.4" fill="#111111" data-series="injected" data-day="54" data-raw="7.8020" data-z="7.8020"/>
+<circle cx="465.90" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="55" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="477.15" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="56" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="488.41" cy="388.00" r="2.4" fill="#111111" data-series="injected" data-day="57" data-raw="0.0000" data-z="0.0000"/>
+<circle cx="499.66" cy="257.48" r="2.4" fill="#111111" data-series="injected" data-day="58" data-raw="3.7161" data-z="3.7161"/>
+<circle cx="510.92" cy="88.00" r="2.4" fill="#111111" data-series="injected" data-day="59" data-raw="8.5417" data-z="8.5417"/>
+<circle cx="522.17" cy="309.44" r="2.4" fill="#111111" data-series="injected" data-day="60" data-raw="2.2368" data-z="2.2368"/>
+<circle cx="533.42" cy="139.96" r="2.4" fill="#111111" data-series="injected" data-day="61" data-raw="7.0624" data-z="7.0624"/>
+<circle cx="544.68" cy="244.49" r="2.4" fill="#111111" data-series="injected" data-day="62" data-raw="4.0859" data-z="4.0859"/>
+<circle cx="555.93" cy="204.90" r="2.4" fill="#111111" data-series="injected" data-day="63" data-raw="5.2132" data-z="5.2132"/>
+<circle cx="567.19" cy="296.45" r="2.4" fill="#111111" data-series="injected" data-day="64" data-raw="2.6066" data-z="2.6066"/>
+<circle cx="578.44" cy="204.90" r="2.4" fill="#111111" data-series="injected" data-day="65" data-raw="5.2132" data-z="5.2132"/>
+<circle cx="589.69" cy="283.46" r="2.4" fill="#111111" data-series="injected" data-day="66" data-raw="2.9764" data-z="2.9764"/>
+<circle cx="600.95" cy="152.95" r="2.4" fill="#111111" data-series="injected" data-day="67" data-raw="6.6925" data-z="6.6925"/>
+<circle cx="612.20" cy="296.45" r="2.4" fill="#111111" data-series="injected" data-day="68" data-raw="2.6066" data-z="2.6066"/>
+<circle cx="623.46" cy="139.96" r="2.4" fill="#111111" data-series="injected" data-day="69" data-raw="7.0624" data-z="7.0624"/>
+<circle cx="634.71" cy="205.53" r="2.4" fill="#111111" data-series="injected" data-day="70" data-raw="5.1954" data-z="5.1954"/>
+<circle cx="645.97" cy="270.47" r="2.4" fill="#111111" data-series="injected" data-day="71" data-raw="3.3463" data-z="3.3463"/>
+<circle cx="657.22" cy="152.95" r="2.4" fill="#111111" data-series="injected" data-day="72" data-raw="6.6925" data-z="6.6925"/>
+<circle cx="668.47" cy="270.47" r="2.4" fill="#111111" data-series="injected" data-day="73" data-raw="3.3463" data-z="3.3463"/>
+<circle cx="679.73" cy="204.90" r="2.4" fill="#111111" data-series="injected" data-day="74" data-raw="5.2132" data-z="5.2132"/>
+<circle cx="690.98" cy="309.44" r="2.4" fill="#111111" data-series="injected" data-day="75" data-raw="2.2368" data-z="2.2368"/>
+<circle cx="702.24" cy="230.88" r="2.4" fill="#111111" data-series="injected" data-day="76" data-raw="4.4735" data-z="4.4735"/>
+<circle cx="713.49" cy="139.33" r="2.4" fill="#111111" data-series="injected" data-day="77" data-raw="7.0801" data-z="7.0801"/>
+<circle cx="724.75" cy="244.49" r="2.4" fill="#111111" data-series="injected" data-day="78" data-raw="4.0859" data-z="4.0859"/>
+<circle cx="736.00" cy="100.99" r="2.4" fill="#111111" data-series="injected" data-day="79" data-raw="8.1719" data-z="8.1719"/>
+<text x="520" y="28" font-family="sans-serif" font-size="12" fill="#111111">injected</text>
+<line x1="490" y1="24" x2="514" y2="24" stroke="#111111" stroke-width="1.6"/>
+<text x="520" y="46" font-family="sans-serif" font-size="12" fill="#555555">null</text>
+<line x1="490" y1="42" x2="514" y2="42" stroke="#555555" stroke-width="1.6" stroke-dasharray="5 3"/>
+</svg>

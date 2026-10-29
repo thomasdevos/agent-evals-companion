@@ -17,11 +17,11 @@ def cases():
         if number == 6:
             args = ['-B', '-m', 'unittest', 'discover', '-v']
         elif number == 16:
-            args = ['-m', 'unittest', 'test_conversations', 'test_corrections.CorrectionTests', 'test_counter_correction', 'test_refusal_correction', '-v']
+            args = ['-m', 'unittest', 'test_conversations', 'test_corrections.CorrectionTests', 'test_counter_correction', 'test_refusal_correction', 'test_make_figures', '-v']
         elif number == 20:
             args = ['-m', 'unittest', '-v', 'test_tracing']
         elif number == 22:
-            args = ['-m', 'unittest', '-v', 'test_drift', 'test_boundaries']
+            args = ['-m', 'unittest', '-v', 'test_drift', 'test_boundaries', 'test_figures']
         else:
             args = ['-m', 'unittest', 'discover', '-s', f'chapter{number:02}', '-p', 'test_*.py', '-v']
         prefix = [selector] + (['--delivery-capsule'] if number == 19 else []) + ['--']

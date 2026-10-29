@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="494" height="394" viewBox="0 0 494 394">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="32" font-family="sans-serif" font-size="18" fill="#111111">Persona and agent outcomes</text>
+<text x="24" y="54" font-family="sans-serif" font-size="12" fill="#333333">4 completed / 10 attempted. 4 useful replies / 31 questions. Unnecessary questions: 0.</text>
+<text x="215.0" y="74" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111111">vague</text>
+<text x="385.0" y="74" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111111">specific</text>
+<text x="24" y="108" font-family="sans-serif" font-size="13" fill="#111111">cooperative</text>
+<rect x="130" y="78" width="162" height="44" fill="#d9d9d9" stroke="#222222" data-persona="cooperative" data-candidate="vague" data-outcome="completed"/>
+<text x="140" y="100" font-family="sans-serif" font-size="13" fill="#111111">completed</text>
+<text x="140" y="116" font-family="sans-serif" font-size="11" fill="#333333">questions 1, useful 1</text>
+<rect x="300" y="78" width="162" height="44" fill="#d9d9d9" stroke="#222222" data-persona="cooperative" data-candidate="specific" data-outcome="completed"/>
+<text x="310" y="100" font-family="sans-serif" font-size="13" fill="#111111">completed</text>
+<text x="310" y="116" font-family="sans-serif" font-size="11" fill="#333333">questions 1, useful 1</text>
+<text x="24" y="160" font-family="sans-serif" font-size="13" fill="#111111">literal</text>
+<rect x="130" y="130" width="162" height="44" fill="#ffffff" stroke="#222222" data-persona="literal" data-candidate="vague" data-outcome="unknown"/>
+<text x="140" y="152" font-family="sans-serif" font-size="13" fill="#111111">unknown</text>
+<text x="140" y="168" font-family="sans-serif" font-size="11" fill="#333333">questions 6, useful 0</text>
+<rect x="300" y="130" width="162" height="44" fill="#d9d9d9" stroke="#222222" data-persona="literal" data-candidate="specific" data-outcome="completed"/>
+<text x="310" y="152" font-family="sans-serif" font-size="13" fill="#111111">completed</text>
+<text x="310" y="168" font-family="sans-serif" font-size="11" fill="#333333">questions 1, useful 1</text>
+<text x="24" y="212" font-family="sans-serif" font-size="13" fill="#111111">noisy</text>
+<rect x="130" y="182" width="162" height="44" fill="#ffffff" stroke="#222222" data-persona="noisy" data-candidate="vague" data-outcome="unknown"/>
+<text x="140" y="204" font-family="sans-serif" font-size="13" fill="#111111">unknown</text>
+<text x="140" y="220" font-family="sans-serif" font-size="11" fill="#333333">questions 6, useful 0</text>
+<rect x="300" y="182" width="162" height="44" fill="#d9d9d9" stroke="#222222" data-persona="noisy" data-candidate="specific" data-outcome="completed"/>
+<text x="310" y="204" font-family="sans-serif" font-size="13" fill="#111111">completed</text>
+<text x="310" y="220" font-family="sans-serif" font-size="11" fill="#333333">questions 2, useful 1</text>
+<text x="24" y="264" font-family="sans-serif" font-size="13" fill="#111111">abandon</text>
+<rect x="130" y="234" width="162" height="44" fill="#bdbdbd" stroke="#222222" data-persona="abandon" data-candidate="vague" data-outcome="abandoned"/>
+<text x="140" y="256" font-family="sans-serif" font-size="13" fill="#111111">abandoned</text>
+<text x="140" y="272" font-family="sans-serif" font-size="11" fill="#333333">questions 1, useful 0</text>
+<rect x="300" y="234" width="162" height="44" fill="#bdbdbd" stroke="#222222" data-persona="abandon" data-candidate="specific" data-outcome="abandoned"/>
+<text x="310" y="256" font-family="sans-serif" font-size="13" fill="#111111">abandoned</text>
+<text x="310" y="272" font-family="sans-serif" font-size="11" fill="#333333">questions 1, useful 0</text>
+<text x="24" y="316" font-family="sans-serif" font-size="13" fill="#111111">drift</text>
+<rect x="130" y="286" width="162" height="44" fill="#ffffff" stroke="#222222" data-persona="drift" data-candidate="vague" data-outcome="unknown"/>
+<text x="140" y="308" font-family="sans-serif" font-size="13" fill="#111111">unknown</text>
+<text x="140" y="324" font-family="sans-serif" font-size="11" fill="#333333">questions 6, useful 0</text>
+<rect x="300" y="286" width="162" height="44" fill="#ffffff" stroke="#222222" data-persona="drift" data-candidate="specific" data-outcome="unknown"/>
+<text x="310" y="308" font-family="sans-serif" font-size="13" fill="#111111">unknown</text>
+<text x="310" y="324" font-family="sans-serif" font-size="11" fill="#333333">questions 6, useful 0</text>
+</svg>
