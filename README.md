@@ -70,7 +70,7 @@ python3 tools/check_offline.py
 
 This runs each current chapter's named suite, Appendix E, the native Chapter 6 suite, the live kit's offline fake-provider, safety and cache-accounting suites, and first-lab positive/negative controls. It verifies expected exit statuses and reports observed test invocations rather than a fixed historical count. It is a local regression check, not independent editorial acceptance or a benchmark of a model. It writes only the labs' temporary/generated outputs. Run it in a disposable clone if you want to preserve your own experiment outputs.
 
-No GitHub Actions workflow is installed. The inherited `ci-example.yaml` files are inert teaching examples, reviewed as examples but not enabled as hosted workflows. They do not deploy, spend money or provide evidence that hosted CI passed.
+`.github/workflows/offline-check.yml` runs `python3 tools/check_offline.py` on pull requests and on pushes to `main`. The job uses Python 3.11 and the standard library only. It needs no secrets and calls no provider APIs. The inherited `ci-example.yaml` files remain inert teaching examples, reviewed as examples but not enabled as hosted workflows. They do not deploy, spend money or provide evidence that hosted CI passed.
 
 ## Offline and live boundaries
 
